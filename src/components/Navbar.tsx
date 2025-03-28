@@ -5,10 +5,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-[#181818] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5">
+    <div className="bg-[#0C0C0C] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5">
       {/* Logo */}
       <div>
-        <h1 className="font-bold text-3xl text-white">Saad</h1>
+        <h1 className="font-bold text-3xl text-white">{"<Saad/>"}</h1>
       </div>
 
       <ul className="hidden md:flex justify-center items-center gap-5 text-white">
@@ -16,6 +16,10 @@ const Navbar = () => {
         <li><a href="#services" className="hover:text-gray-400">Services</a></li>
         <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
       </ul>
+
+      <div className="hidden md:flex justify-center items-center gap-5 text-white">
+        <button className="bg-theme-color text-white py-2 px-4 font-bold cursor-pointer rounded-full">Contact Me</button>
+      </div>
 
       <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
@@ -25,6 +29,7 @@ const Navbar = () => {
         <a href="#about" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>About</a>
         <a href="#services" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Services</a>
         <a href="#contact" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Contact</a>
+        <button>Contact Me</button>
       </div>
     </div>
   );

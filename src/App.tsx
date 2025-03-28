@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Services from './components/Services'
 
 // Ideas From:
 // https://github.com/Okashanadeem/Html-Tailwind-Portfolio/
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <About/>
       <Skills/>
+      <Services/>
       <Contact/>
       <Footer />
     </div>
