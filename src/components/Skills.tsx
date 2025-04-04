@@ -1,27 +1,43 @@
-import HtmlIcon from "../assets/html-icon.png"
-import CssIcon from "../assets/css-icon.png"
-import BootstrapIcon from "../assets/bootstrap-icon.png"
-import JsIcon from "../assets/js-icon.png"
-import ReactIcon from "../assets/reacticon.png"
-import TsIcon from "../assets/typescript-icon.png"
-import TailwindCssIcon from "../assets/tailwind-css-icon.svg"
+import { motion } from "motion/react"
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
-const Skills = () => {
-  // const logos = [{name: "Html"},{ name: "Tailwind Css", path: TailwindCssIcon }]
-  const logos = [HtmlIcon, CssIcon, BootstrapIcon, JsIcon, ReactIcon, TailwindCssIcon, TsIcon]
+const skills = [
+  { name: "HTML", level: "Expert", icon: <FaHtml5 className="text-orange-500 text-4xl" /> },
+  { name: "CSS", level: "Expert", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
+  { name: "JavaScript", level: "Advanced", icon: <FaJs className="text-yellow-400 text-4xl" /> },
+  { name: "React", level: "Advanced", icon: <FaReact className="text-cyan-400 text-4xl" /> },
+  { name: "TypeScript", level: "Intermediate", icon: <SiTypescript className="text-blue-600 text-4xl" /> },
+  { name: "Tailwind CSS", level: "Advanced", icon: <SiTailwindcss className="text-sky-400 text-4xl" /> },
+  { name: "Motion", level: "Intermediate", icon: <TbBrandFramerMotion className="text-white text-4xl" /> },
+  { name: "Git", level: "Advance", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
+];
 
+const SkillsSection = () => {
   return (
-    <div id="skills" className="flex flex-col w-3/4 mx-auto py-10 gap-10">
-      <h1 className="text-5xl font-bold text-center">My Skills</h1>
-      <div className="flex justify-around flex-wrap ">
-        {logos.map(((logo, index) => (
-          <div key={index} className="w-20 flex justify-center items-center">
-            <img src={logo} alt="" />
-          </div>
-        )))}
+    <div id="skills" className="bg-[#0C0C0C] py-20 px-6 md:px-20 text-white">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
+        🚀 My Skills
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={skill.name}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="bg-[#1a1a1a]/60 backdrop-blur-md px-6 py-6 rounded-xl shadow-md text-center w-full hover:shadow-lg hover:scale-105 transition duration-300 border border-transparent hover:border-theme-color"
+          >
+            <div className="mb-3 flex justify-center">{skill.icon}</div>
+            <h3 className="text-lg font-semibold tracking-wide">{skill.name}</h3>
+            <p className="text-sm text-gray-400">{skill.level}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default SkillsSection;

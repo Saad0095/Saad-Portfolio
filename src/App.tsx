@@ -6,11 +6,11 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Services from './components/Services'
 
-// Ideas From:
+// Inspirations:
 // https://github.com/Okashanadeem/Html-Tailwind-Portfolio/
 // https://hasanraza-portfolio.vercel.app/
 // https://www.behance.net/gallery/178013497/Personal-Portfolio-Web-Design-UI-UX-Design
-
+// https://youtu.be/dImgZ_AH7uA?si=lvp0YxyohcYmbjrK
 function App() {
 
   return (

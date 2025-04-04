@@ -8,7 +8,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <div className="text-center h-12 flex justify-center items-center border-2">
+        <div className="text-center h-12 flex justify-center items-center">
             <p>&copy; {year}. All Rights Reserved.</p>
         </div>
     )
