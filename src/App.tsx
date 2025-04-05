@@ -19,7 +19,7 @@ function App() {
       <Hero />
       <About/>
       <Skills/>
-      <Services/>
+      {/* <Services/> */}
       <Contact/>
       <Footer />
     </div>

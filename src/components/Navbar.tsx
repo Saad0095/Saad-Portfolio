@@ -22,7 +22,8 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:flex justify-center items-center gap-5 text-white">
-        <button className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+        {/* <button className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer"> */}
+        <button className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
           Contact Me
         </button>
       </div>
