@@ -17,14 +17,14 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex justify-center items-center gap-8 text-white font-semibold">
         <li><a href="#about" className="hover:text-theme-color transition duration-300">About</a></li>
-        <li><a href="#services" className="hover:text-theme-color transition duration-300">Services</a></li>
+        <li><a href="#skills" className="hover:text-theme-color transition duration-300">Skills</a></li>
         <li><a href="#contact" className="hover:text-theme-color transition duration-300">Contact</a></li>
       </ul>
 
       <div className="hidden md:flex justify-center items-center gap-5 text-white">
         {/* <button className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer"> */}
         <button className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-          Contact Me
+          <a href="#contact">Contact Me</a>
         </button>
       </div>
 

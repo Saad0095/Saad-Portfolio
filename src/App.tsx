@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-import Services from './components/Services'
 
 // Inspirations:
 // https://github.com/Okashanadeem/Html-Tailwind-Portfolio/
