@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 const Footer = () => {
   const [year, setYear] = useState(new Date().getFullYear())
@@ -38,6 +38,14 @@ const Footer = () => {
             className="hover:text-theme-color transition-colors"
           >
             <FaInstagram />
+          </a>
+          <a
+            href="https://wa.me/923170218290"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-400 transition-colors"
+          >
+            <FaWhatsapp />
           </a>
         </div>
       </div>

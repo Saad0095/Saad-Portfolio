@@ -36,7 +36,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Hire Me!
+          <a href="#contact">Hire Me!</a>
         </motion.button>
       </div>
       <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">

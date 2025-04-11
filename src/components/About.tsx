@@ -1,6 +1,6 @@
 import HeroImg from "../assets/Hero_Image.png";
 import { motion } from "framer-motion";
-
+import Resume from "../assets/Saad - Frontend Developer Resume.pdf"
 const About = () => {
   return (
     <div
@@ -41,14 +41,17 @@ const About = () => {
           I’m always eager to explore new technologies, optimize user experiences, and push the boundaries of front-end development. Let's build something amazing together!
         </motion.p>
 
-        <motion.button
-          className="text-base border-2 border-theme-color text-white rounded py-4 font-bold cursor-pointer hover:bg-theme-color w-48 transition-all ease-in-out"
+        <motion.a
+          href={Resume}
+          download="Saad Frontend Dev_Resume.pdf"
+          rel="noopener noreferrer"
+          className="text-base border-2 border-theme-color text-white rounded py-4 font-bold cursor-pointer hover:bg-theme-color w-48 text-center transition-all ease-in-out"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Download Resume
-        </motion.button>
+          View Resume
+        </motion.a>
       </div>
     </div>
   );
