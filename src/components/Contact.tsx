@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedin, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -28,6 +28,11 @@ const Contact = () => {
     {
       Icon: FaPhoneAlt,
       label: "Phone",
+      value: "+92 317 0218290",
+    },
+    {
+      Icon: FaWhatsapp,
+      label: "Whatsapp",
       value: "+92 317 0218290",
     },
     {
@@ -163,7 +168,7 @@ const Contact = () => {
 
         {/* Contact Info */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col gap-6"
+          className="w-full md:w-1/2 flex flex-col gap-2"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
