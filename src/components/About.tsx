@@ -1,4 +1,4 @@
-import HeroImg from "../assets/Hero_Image.png";
+import DevImg from "../assets/developer_image.jpg";
 import { motion } from "framer-motion";
 import Resume from "../assets/Saad - Frontend Developer Resume.pdf"
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
     >
       <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
         <motion.img
-          src={HeroImg}
+          src={DevImg}
           alt="Hero"
           className="max-w-full h-auto object-contain rounded-lg shadow-lg"
           initial={{ opacity: 0, y: 20 }}

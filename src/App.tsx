@@ -8,7 +8,7 @@ import Contact from './components/Contact'
 function App() {
 
   return (
-    <div className='bg-[#0C0C0C] text-white'>
+    <div className='bg-[#0C0C0C] text-white overflow-x-hidden font-primary'>
       <Navbar />
       <Hero />
       {/* <svg className="w-full h-12" viewBox="0 0 1440 320">

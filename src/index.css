@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import "tailwindcss";
 
 @theme {
   --color-theme-color:#DD7F24;

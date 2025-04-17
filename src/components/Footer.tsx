@@ -9,10 +9,10 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer className="bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white shadow-inner py-6 px-4 mt-10">
+    <footer className="bg-gradient-to-r from-[#021235] to-[#1e293b] text-white shadow-inner py-6 px-4 mt-10">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
         {/* Text */}
-        <p className="text-sm text-center md:text-left mb-4 md:mb-0 tracking-wide">
+        <p className="text-center md:text-left mb-4 md:mb-0 tracking-wide">
           &copy; {year} <span className="text-theme-color font-semibold">Saad Bin Khalid</span>. All Rights Reserved.
         </p>
 

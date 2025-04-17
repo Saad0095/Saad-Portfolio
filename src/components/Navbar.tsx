@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="bg-[#0C0C0C] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5 shadow-md">
       <div>
         <h1 className="font-bold text-3xl text-white tracking-wide hover:text-theme-color transition duration-300">
-          {"<Saad/>"}
+          {"Saad</>"}
         </h1>
       </div>
 
@@ -22,7 +22,6 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:flex justify-center items-center gap-5 text-white">
-        {/* <button className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer"> */}
         <button className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
           <a href="#contact">Contact Me</a>
         </button>
@@ -31,9 +30,9 @@ const Navbar = () => {
       {/* Mobile Toggle Button */}
       <button className="md:hidden text-white z-50" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
-          <FaTimes size={25} className="transition-transform duration-300 rotate-180" />
+          <FaTimes size={25} className="transition-transform duration-300 rotate-180 cursor-pointer" />
         ) : (
-          <FaBarsStaggered size={25} className="transition-transform duration-300" />
+          <FaBarsStaggered size={25} className="transition-transform duration-300 cursor-pointer" />
         )}
       </button>
 
