@@ -48,7 +48,7 @@ const Navbar = () => {
             className="fixed top-0 right-0 w-2/3 h-screen bg-[#0C0C0C]/95 backdrop-blur-md p-10 flex flex-col items-start gap-8 text-white"
           >
             <a href="#about" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#services" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>Services</a>
+            <a href="#skills" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>Skills</a>
             <a href="#contact" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>Contact</a>
             <motion.button
               whileHover={{ scale: 1.05 }}

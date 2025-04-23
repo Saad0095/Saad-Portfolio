@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { FaLinkedin, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -39,12 +39,6 @@ const Contact = () => {
       Icon: MdEmail,
       label: "Email",
       value: "saadbinkhalid1895@gmail.com",
-    },
-    {
-      Icon: FaLinkedin,
-      label: "LinkedIn",
-      value: "Saad Bin Khalid",
-      link: "https://www.linkedin.com/in/saad-bin-khalid-b077b8243/",
     },
   ];
 
@@ -87,7 +81,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="py-20 px-4">
-      <ToastContainer/> 
+      <ToastContainer />
       <motion.h1
         className="text-4xl font-bold text-theme-color text-center mb-10"
         initial={{ opacity: 0, x: -30 }}
@@ -97,7 +91,7 @@ const Contact = () => {
         Contact Us
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 mx-auto md:w-10/12">
+      <div className="flex flex-col md:flex-row justify-center gap-10 mx-auto md:w-10/12">
         {/* Form */}
         <motion.form
           ref={formRef}
@@ -173,7 +167,8 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {contactItems.map(({ Icon, label, value, link }, index) => (
+          <p className="p-4 text-gray-300">Got a project in mind, need some frontend magic, or just want to geek out about web development? I’d love to hear from you! Reach out anytime, and I’ll get back to you soon.</p>
+          {contactItems.map(({ Icon, label, value }, index) => (
             <motion.div
               key={index}
               className="flex items-center gap-5 p-4 rounded-lg hover:bg-white/10 hover:shadow-lg transition-all"
@@ -185,18 +180,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col">
                 <h4 className="font-semibold">{label}</h4>
-                {link ? (
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    {value}
-                  </a>
-                ) : (
-                  <p>{value}</p>
-                )}
+                <p>{value}</p>
               </div>
             </motion.div>
           ))}

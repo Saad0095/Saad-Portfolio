@@ -45,7 +45,7 @@ const About = () => {
           href={Resume}
           download="Saad Frontend Dev_Resume.pdf"
           rel="noopener noreferrer"
-          className="text-base border-2 border-theme-color text-white rounded py-4 font-bold cursor-pointer hover:bg-theme-color w-48 text-center transition-all ease-in-out"
+          className="text-base border-2 border-theme-color text-white rounded py-3  font-bold cursor-pointer hover:bg-theme-color w-36 text-center transition-all ease-in-out mx-auto md:mx-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
