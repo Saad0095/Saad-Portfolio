@@ -54,7 +54,6 @@ const Form = () => {
                 },
                 (error) => {
                     toast.error("Failed to send email", error.text);
-                    alert("Failed to send message. Please try again later.");
                 }
             );
     };
