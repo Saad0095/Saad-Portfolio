@@ -1,10 +1,29 @@
-# Personal Portfolio - Saad Bin Khalid
+## 💼 Saad Bin Khalid – Portfolio Website
 
-This is my Personal Portfolio Website, showcasing my skills as a frontend web developer. The website is built using React, Tailwind CSS and Motion.
+Welcome to my personal portfolio website, built to showcase my skills, projects, and experience as a Frontend Developer. The site is designed with a modern, responsive layout and developed using technologies like React, Tailwind CSS, and Framer Motion.
 
-## Contact
+## 🚀 Features
+- 🖥️ Responsive Design (Mobile, Tablet, Desktop)
 
-- **Contact no.** +92 317 0218290 
-- **Linked**: https://www.linkedin.com/in/saad-bin-khalid-b077b8243/
-- **GitHub**: https://github.com/Saad0095
+<!-- - 🌙 Dark Mode Toggle with localStorage -->
 
+- 💡 Smooth Animations using Framer Motion
+
+- 🧩 Project Showcases with GitHub Links
+
+- 🧠 Skills, Resume, and Contact Section
+
+## 🛠️ Tech Stack
+- **Frontend:** React, Tailwind CSS, HTML5, TypeScript
+
+- **Animations:** Framer Motion
+
+- **Icons:** React Icons
+
+- **Deployment:** Vercel
+
+## 📬 Contact
+
+- **Email:** saadbinkhalid1895@gmail.com
+- **GitHub:**: https://github.com/Saad0095
+- **Linked:**: https://www.linkedin.com/in/saad-bin-khalid-b077b8243/
