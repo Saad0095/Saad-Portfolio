@@ -18,6 +18,7 @@ const Navbar = () => {
       <ul className="hidden md:flex justify-center items-center gap-8 text-white font-semibold">
         <li><a href="#about" className="hover:text-theme-color transition duration-300">About</a></li>
         <li><a href="#skills" className="hover:text-theme-color transition duration-300">Skills</a></li>
+        <li><a href="#skills" className="hover:text-theme-color transition duration-300">Projects</a></li>
         <li><a href="#contact" className="hover:text-theme-color transition duration-300">Contact</a></li>
       </ul>
 
