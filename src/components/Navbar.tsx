@@ -1,35 +1,52 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence, motion } from "framer-motion";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const sidebarRef = useRef(null);
+
+  const linkClasses = "hover:text-theme-color transition duration-300";
+
   return (
-    <div className="bg-[#0C0C0C] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5 shadow-md">
-      <div>
-        <h1 className="font-bold text-3xl text-white tracking-wide hover:text-theme-color transition duration-300">
-          {"Saad</>"}
-        </h1>
-      </div>
+    <nav className="bg-[#0C0C0C] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5 shadow-md">
+      <h1 className="font-bold text-3xl text-white tracking-wide hover:text-theme-color transition duration-300">
+        {"Saad</>"}
+      </h1>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex justify-center items-center gap-8 text-white font-semibold">
-        <li><a href="#about" className="hover:text-theme-color transition duration-300">About</a></li>
-        <li><a href="#skills" className="hover:text-theme-color transition duration-300">Skills</a></li>
-        <li><a href="#skills" className="hover:text-theme-color transition duration-300">Projects</a></li>
-        <li><a href="#contact" className="hover:text-theme-color transition duration-300">Contact</a></li>
+      <ul className="hidden md:flex gap-8 text-white font-semibold">
+        {navLinks.map((link) => (
+          <li key={link.label}>
+            <a href={link.href} className={linkClasses}>
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
 
-      <div className="hidden md:flex justify-center items-center gap-5 text-white">
-        <button className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-          <a href="#contact">Contact Me</a>
-        </button>
+      {/* Desktop CTA Button */}
+      <div className="hidden md:flex">
+        <a
+          href="#contact"
+          className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+        >
+          Contact Me
+        </a>
       </div>
 
       {/* Mobile Toggle Button */}
-      <button className="md:hidden text-white z-50" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="md:hidden text-white z-50"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {isOpen ? (
           <FaTimes size={25} className="transition-transform duration-300 rotate-180 cursor-pointer" />
         ) : (
@@ -41,28 +58,37 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            ref={sidebarRef}
+            key="mobile-menu"
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed top-0 right-0 w-2/3 h-screen bg-[#0C0C0C]/95 backdrop-blur-md p-10 flex flex-col items-start gap-8 text-white"
+            className="fixed top-0 right-0 w-2/3 h-screen bg-[#0C0C0C]/95 backdrop-blur-md p-10 flex flex-col gap-8 text-white z-40"
           >
-            <a href="#about" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#skills" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>Skills</a>
-            <a href="#contact" className="hover:text-theme-color transition duration-300" onClick={() => setIsOpen(false)}>Contact</a>
-            <motion.button
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className={linkClasses}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(false)}
               className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-md transition duration-300"
             >
               Contact Me
-            </motion.button>
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
-
-    </div>
+    </nav>
   );
 };
 
