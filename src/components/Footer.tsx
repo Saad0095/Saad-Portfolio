@@ -21,24 +21,24 @@ const Footer = () => {
           <a
             href="https://github.com/Saad0095"
             target="_blank"
-            className="hover:text-theme-color transition-colors"
+            className="hover:text-gray-400 transition-colors"
           >
             <FaGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/saad-bin-khalid-b077b8243/"
             target="_blank"
-            className="hover:text-theme-color transition-colors"
+            className="hover:text-blue-400 transition-colors"
           >
             <FaLinkedin />
           </a>
-          <a
-            href="https://www.instagram.com/saadbinkhalid.18/"
+          {/* <a
+            href="https://www.instagram.com/saadbinkhalid95/"
             target="_blank"
             className="hover:text-theme-color transition-colors"
           >
             <FaInstagram />
-          </a>
+          </a> */}
           <a
             href="https://wa.me/923170218290"
             target="_blank"

@@ -30,14 +30,16 @@ const Hero = () => {
           With Expertise in React, Tailwind CSS, and TypeScript
         </motion.h4>
 
-        <motion.button
-          className="bg-theme-color text-white rounded py-3 px-6 font-bold cursor-pointer mx-auto md:mx-0 max-w-28 transition-all duration-300 ease-in-out transform hover:scale-105"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <a href="#contact">Hire Me!</a>
-        </motion.button>
+        <a href="#services">
+          <motion.button
+            className="bg-theme-color text-white rounded py-3 px-6 font-bold cursor-pointer mx-auto md:mx-0 max-w-28 transition-all duration-300 ease-in-out transform hover:scale-105"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            Hire Me!
+          </motion.button>
+        </a>
       </div>
       <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
         <motion.img

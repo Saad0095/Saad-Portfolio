@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 px-4">
       <motion.h2
-        className="text-4xl font-bold text-theme-color text-center mb-10"
+        className="text-4xl font-bold text-white text-center mb-10"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
