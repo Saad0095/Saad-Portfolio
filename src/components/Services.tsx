@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import GigImg1 from "../assets/GigImg1.jpeg";
 import GigImg2 from "../assets/GigImg2.jpeg";
 import GigImg3 from "../assets/GigImg3.jpeg";
+import GigImg4 from "../assets/GigImg3.jpeg";
 
 const services = [
   {
@@ -30,7 +31,7 @@ const services = [
     description:
       "I will convert PSD, XD, or Figma designs into responsive HTML/CSS websites with clean code.",
     link: "https://www.fiverr.com/s/e6w45xr",
-    image: GigImg2,
+    image: GigImg4,
   },
 ];
 
