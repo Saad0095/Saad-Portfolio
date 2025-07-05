@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import GigImg1 from "../assets/GigImg1.jpeg";
+import GigImg1 from "../assets/GigImg1.png";
 import GigImg2 from "../assets/GigImg2.jpg";
-import GigImg3 from "../assets/GigImg3.jpeg";
-import GigImg4 from "../assets/GigImg4.jpeg";
+import GigImg3 from "../assets/GigImg3.png";
+import GigImg4 from "../assets/GigImg4.png";
 
 const services = [
   {
