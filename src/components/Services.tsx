@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import GigImg1 from "../assets/GigImg1.png";
+// import GigImg1 from "../assets/GigImg1.png";
 import GigImg2 from "../assets/GigImg2.jpg";
 import GigImg3 from "../assets/GigImg3.png";
 import GigImg4 from "../assets/GigImg4.png";
@@ -10,7 +10,7 @@ const services = [
     description:
       "I will build a fast and fully responsive React front-end application tailored to your needs.",
     link: "https://www.fiverr.com/s/BRD73xl",
-    image: GigImg1,
+    image: GigImg3,
   },
   {
     title: "Convert Figma to React",
@@ -18,13 +18,6 @@ const services = [
       "I will convert your Figma design into a responsive and pixel-perfect React frontend.",
     link: "https://www.fiverr.com/s/2Kv2DoX",
     image: GigImg2,
-  },
-  {
-    title: "Modern React UI Website",
-    description:
-      "I will develop a modern front-end website using React with a sleek, mobile-friendly interface.",
-    link: "https://www.fiverr.com/s/0bVW8l2",
-    image: GigImg3,
   },
   {
     title: "PSD/XD/Figma to HTML/CSS",
@@ -47,7 +40,7 @@ const Services = () => {
         My Services
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
