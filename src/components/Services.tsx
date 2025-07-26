@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-// import GigImg1 from "../assets/GigImg1.png";
+import GigImg1 from "../assets/GigImg1.png";
 import GigImg2 from "../assets/GigImg2.jpg";
 import GigImg3 from "../assets/GigImg3.png";
 import GigImg4 from "../assets/GigImg4.png";
@@ -26,6 +26,13 @@ const services = [
     link: "https://www.fiverr.com/s/e6w45xr",
     image: GigImg4,
   },
+  {
+    title: "Responsive HTML landing page",
+    description:
+      "I will create a modern, responsive HTML, CSS, Bootstrap landing page	websites.",
+    link: "https://www.fiverr.com/s/Q73jjER",
+    image: GigImg1,
+  },
 ];
 
 const Services = () => {
@@ -40,7 +47,7 @@ const Services = () => {
         My Services
       </motion.h2>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
