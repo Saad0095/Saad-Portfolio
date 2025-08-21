@@ -32,13 +32,13 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hi, I'm Muhammad Saad Bin Khalid – a Frontend Developer passionate about crafting modern, responsive, and high-performance web applications.
+          Hi, I'm Muhammad Saad Bin Khalid. I’m a Full Stack MERN Developer passionate about building modern, scalable, and responsive web applications. I specialize in React.js, TypeScript, JavaScript, Tailwind CSS, Bootstrap, Node.js, Express.js, and MongoDB, creating clean, maintainable, and high-performance applications.
           <br />
           <br />
-          With expertise in React, TypeScript, Tailwind CSS, and Framer Motion, I create interactive, user-friendly experiences that blend aesthetics with functionality. My focus is on writing clean, maintainable code while ensuring seamless performance across devices.
+          With experience in both frontend and backend development, I bridge the gap between design and functionality — delivering secure, optimized, and user-friendly apps. My work focuses on real-world impact, clean code, and seamless performance across devices.
           <br />
           <br />
-          I’m always eager to explore new technologies, optimize user experiences, and push the boundaries of front-end development. Let's build something amazing together!
+          I’m currently enrolled at NED University (BCIT, Class of 2029), continuously expanding my Full Stack skills while exploring AI and advanced backend technologies.
         </motion.p>
 
         <motion.a

@@ -19,7 +19,7 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          FrontEnd <span className="text-theme-color">Developer</span>
+          Full Stack <span className="text-theme-color">Developer</span>
         </motion.h1>
         <motion.h4
           className="text-lg sm:text-xl"
@@ -27,7 +27,7 @@ const Hero = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          With Expertise in React, Tailwind CSS, and TypeScript
+          With Expertise in React, Tailwind CSS, and Nodejs
         </motion.h4>
 
         <a href="#services">

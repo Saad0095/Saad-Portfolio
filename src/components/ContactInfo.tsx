@@ -28,7 +28,7 @@ const ContactInfo = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
         >
-            <p className="p-4 text-gray-300">Got a project in mind, need some frontend magic, or just want to geek out about web development? I’d love to hear from you! Reach out anytime, and I’ll get back to you soon.</p>
+            <p className="p-4 text-gray-300">Got a project in mind, need a Full Stack solution, or want to discuss web development? I’d love to hear from you! Reach out anytime, and I’ll get back to you soon.</p>
             {contactItems.map(({ Icon, label, value }, index) => (
                 <motion.div
                     key={index}

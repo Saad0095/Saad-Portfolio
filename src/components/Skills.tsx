@@ -1,17 +1,21 @@
 import { motion } from "motion/react"
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaNodeJs, FaBootstrap } from "react-icons/fa";
+import { SiAntdesign, SiExpress, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 const skills = [
   { name: "HTML", level: "Expert", icon: <FaHtml5 className="text-orange-500 text-4xl" /> },
   { name: "CSS", level: "Expert", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
+  { name: "Bootstrap", level: "Advanced", icon: <FaBootstrap className="text-purple-500 text-4xl" /> }, 
   { name: "JavaScript", level: "Advanced", icon: <FaJs className="text-yellow-400 text-4xl" /> },
   { name: "React", level: "Advanced", icon: <FaReact className="text-cyan-400 text-4xl" /> },
   { name: "TypeScript", level: "Intermediate", icon: <SiTypescript className="text-blue-600 text-4xl" /> },
   { name: "Tailwind CSS", level: "Advanced", icon: <SiTailwindcss className="text-sky-400 text-4xl" /> },
-  { name: "Motion", level: "Intermediate", icon: <TbBrandFramerMotion className="text-white text-4xl" /> },
-  { name: "Git", level: "Advance", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
+  { name: "Framer Motion", level: "Intermediate", icon: <TbBrandFramerMotion className="text-white text-4xl" /> },
+  { name: "Node.js", level: "Intermediate", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
+  { name: "Express.js", level: "Intermediate", icon: <SiExpress className="text-gray-300 text-4xl" /> },
+  { name: "MongoDB", level: "Intermediate", icon: <SiMongodb className="text-green-400 text-4xl" /> },
+  { name: "Git & GitHub", level: "Advanced", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
 ];
 
 const SkillsSection = () => {

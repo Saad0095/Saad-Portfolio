@@ -108,6 +108,7 @@ const Form = () => {
                 <option value="Full Stack Development">Full Stack Website Development</option>
                 <option value="E-Commerce Website Dvelopment">E-Commerce Website Dvelopment</option>
                 <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Other">Other</option>
             </select>
             <textarea
                 name="message"
