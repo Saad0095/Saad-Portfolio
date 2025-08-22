@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaNodeJs, FaBootstrap } from "react-icons/fa";
-import { SiAntdesign, SiExpress, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 const skills = [
