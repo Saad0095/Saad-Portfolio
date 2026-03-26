@@ -53,7 +53,7 @@ const Services = () => {
             <p className="text-gray-300 mb-6">{service.description}</p>
             <a
               href="#contact"
-              className="inline-block bg-theme-color text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-emerald-600 transition-all duration-300 text-base mt-auto cursor-pointer"
+              className="inline-block bg-gradient-to-br from-theme-color to-theme-color/60 text-white font-semibold px-6 py-2 rounded-full shadow hover:shadow-lg transition-all duration-300 text-base mt-auto cursor-pointer"
             >
               {service.cta}
             </a>

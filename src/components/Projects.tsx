@@ -53,7 +53,7 @@ const Projects = () => {
             className={`relative bg-[#1a1a1a]/70 backdrop-blur-md p-6 rounded-2xl shadow-xl border-2 transition-all duration-300 flex flex-col justify-between ${project.featured ? 'border-theme-color scale-105 shadow-theme-color/30' : 'border-transparent hover:border-theme-color hover:scale-105'}`}
           >
             {project.featured && (
-              <span className="absolute top-4 right-4 bg-theme-color text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">Featured Project</span>
+              <span className="absolute top-4 right-4 bg-gradient-to-br from-theme-color to-theme-color/60 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">Featured Project</span>
             )}
             <img src={project.image} alt={project.title} className="w-full h-44 object-cover rounded-xl mb-5 border border-theme-color/20 shadow-md" />
             <h3 className="text-2xl font-bold text-theme-color mb-2">{project.title}</h3>

@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="hidden md:flex">
           <a
             href="#contact"
-            className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
+            className="bg-gradient-to-br from-theme-color to-theme-color/60 text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:shadow-xl transition duration-300 cursor-pointer"
           >
             Contact Me
           </a>
@@ -83,7 +83,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(false)}
-                className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
+                className="bg-gradient-to-br from-theme-color to-theme-color/60 text-white py-2 px-6 font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
               >
                 Contact Me
               </motion.a>

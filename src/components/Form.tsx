@@ -121,7 +121,7 @@ const Form = () => {
             ></textarea>
             <button
                 type="submit"
-                className="bg-theme-color text-white py-3 px-6 rounded-md font-semibold hover:scale-105 transition-transform w-max cursor-pointer"
+                className="bg-gradient-to-br from-theme-color to-theme-color/60 text-white py-3 px-6 rounded-md font-semibold hover:shadow-lg transition-all duration-300 w-max cursor-pointer"
             >
                 Send Message
             </button>

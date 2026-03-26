@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Adeel R.",
+    name: "Ali Hasan Rajani",
     feedback: "Saad delivered a high-converting landing page for our agency. The process was smooth, and the results exceeded expectations!",
     company: "Leadsrift Agency"
   },
   {
-    name: "Sarah K.",
+    name: "Abdullah Bin Waqar",
     feedback: "Professional, fast, and always focused on business results. Highly recommended for any web project.",
     company: "Startup Founder"
   },
   {
-    name: "Ali D.",
+    name: "Hamza",
     feedback: "Our CRM project was complex, but Saad handled it with expertise and clear communication throughout.",
     company: "Leaders Tax Collection"
   }

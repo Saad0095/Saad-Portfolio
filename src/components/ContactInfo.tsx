@@ -36,7 +36,7 @@ const ContactInfo = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
-                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md shadow-md text-theme-color text-2xl hover:shadow-lg transition-all">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-theme-color to-theme-color/60 backdrop-blur-md shadow-md text-white text-2xl hover:shadow-lg hover:scale-110 transition-all">
                         <Icon />
                     </div>
                     <div className="flex flex-col">
