@@ -1,43 +1,36 @@
 import { motion } from "framer-motion";
-import GigImg1 from "../assets/GigImg1.png";
-import GigImg2 from "../assets/GigImg2.jpg";
-import GigImg3 from "../assets/GigImg3.png";
-import GigImg4 from "../assets/GigImg4.png";
+import { FaLaptopCode, FaRocket, FaLayerGroup, FaFigma } from "react-icons/fa";
 
 const services = [
   {
-    title: "Responsive React Frontend App",
-    description:
-      "I will build a fast and fully responsive React front-end application tailored to your needs.",
-    link: "https://www.fiverr.com/s/BRD73xl",
-    image: GigImg3,
+    icon: <FaLaptopCode className="text-theme-color text-4xl mb-3" />,
+    title: "Modern Web Applications",
+    description: "I build scalable, high-performance web apps using React & Node.js tailored to your business needs.",
+    cta: "Start a Project"
   },
   {
-    title: "Convert Figma to React",
-    description:
-      "I will convert your Figma design into a responsive and pixel-perfect React frontend.",
-    link: "https://www.fiverr.com/s/2Kv2DoX",
-    image: GigImg2,
+    icon: <FaRocket className="text-theme-color text-4xl mb-3" />,
+    title: "High-Converting Landing Pages",
+    description: "Designed to turn visitors into customers using modern UI/UX principles and conversion-focused design.",
+    cta: "Let’s Work Together"
   },
   {
-    title: "PSD/XD/Figma to HTML/CSS",
-    description:
-      "I will convert PSD, XD, or Figma designs into responsive HTML/CSS websites with clean code.",
-    link: "https://www.fiverr.com/s/e6w45xr",
-    image: GigImg4,
+    icon: <FaLayerGroup className="text-theme-color text-4xl mb-3" />,
+    title: "Full-Stack Development",
+    description: "End-to-end development from frontend to backend with clean, scalable architecture for real business value.",
+    cta: "Hire Me"
   },
   {
-    title: "Responsive HTML landing page",
-    description:
-      "I will create a modern, responsive HTML, CSS, Bootstrap landing page	websites.",
-    link: "https://www.fiverr.com/s/Q73jjER",
-    image: GigImg1,
+    icon: <FaFigma className="text-theme-color text-4xl mb-3" />,
+    title: "UI to Code (Figma to React)",
+    description: "Convert designs into pixel-perfect, responsive React applications that match your vision.",
+    cta: "Start a Project"
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 px-4">
+    <section id="services" className="py-20 px-4 bg-[#181818]">
       <motion.h2
         className="text-4xl font-bold text-white text-center mb-10"
         initial={{ opacity: 0, y: -20 }}
@@ -46,39 +39,24 @@ const Services = () => {
       >
         My Services
       </motion.h2>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
-            key={index}
-            className="bg-[#1a1a1a]/60 backdrop-blur-md rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden"
+            key={service.title}
+            className="bg-[#1a1a1a]/70 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-theme-color/30 transition-shadow overflow-hidden p-7 flex flex-col items-center text-center border border-transparent hover:border-theme-color"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
           >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full object-cover"
-            />
-            <div className="p-5 flex flex-col justify-between h-[220px]">
-              <div>
-                <h3 className="text-xl font-semibold text-theme-color">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 mt-2">
-                  {service.description}
-                </p>
-              </div>
-              <a
-                href={service.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-theme-color font-semibold hover:underline"
-              >
-                Hire Me on Fiverr →
-              </a>
-            </div>
+            {service.icon}
+            <h3 className="text-xl font-bold text-theme-color mb-2">{service.title}</h3>
+            <p className="text-gray-300 mb-6">{service.description}</p>
+            <a
+              href="#contact"
+              className="inline-block bg-theme-color text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-pink-600 transition-all duration-300 text-base mt-auto cursor-pointer"
+            >
+              {service.cta}
+            </a>
           </motion.div>
         ))}
       </div>

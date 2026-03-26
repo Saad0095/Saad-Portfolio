@@ -27,7 +27,7 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-8 text-white font-semibold">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className={linkClasses}>
+              <a href={link.href} className={linkClasses + " cursor-pointer"}>
                 {link.label}
               </a>
             </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="hidden md:flex">
           <a
             href="#contact"
-            className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+            className="bg-theme-color text-white py-2 px-6 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer"
           >
             Contact Me
           </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-white z-50"
+          className="md:hidden text-white z-50 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={linkClasses}
+                  className={linkClasses + " cursor-pointer"}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -83,7 +83,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(false)}
-                className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-md transition duration-300"
+                className="bg-gradient-to-r from-theme-color to-pink-500 text-white py-2 px-6 font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
               >
                 Contact Me
               </motion.a>

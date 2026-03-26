@@ -4,7 +4,10 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+
 import Projects from './components/Projects'
+import HowIWork from './components/HowIWork'
+import Testimonials from './components/Testimonials'
 import Services from './components/Services'
 
 function App() {
@@ -16,6 +19,8 @@ function App() {
       <About />
       <Skills />
       <Projects/>
+      <HowIWork/>
+      <Testimonials/>
       <Services/>
       <Contact />
       <Footer />

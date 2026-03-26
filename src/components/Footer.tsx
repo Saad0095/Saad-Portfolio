@@ -21,14 +21,14 @@ const Footer = () => {
           <a
             href="https://github.com/Saad0095"
             target="_blank"
-            className="hover:text-gray-400 transition-colors"
+            className="hover:text-gray-400 transition-colors cursor-pointer"
           >
             <FaGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/saad-bin-khalid-b077b8243/"
             target="_blank"
-            className="hover:text-blue-400 transition-colors"
+            className="hover:text-blue-400 transition-colors cursor-pointer"
           >
             <FaLinkedin />
           </a>
@@ -36,7 +36,7 @@ const Footer = () => {
             href="https://wa.me/923170218290"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-green-400 transition-colors"
+            className="hover:text-green-400 transition-colors cursor-pointer"
           >
             <FaWhatsapp />
           </a>

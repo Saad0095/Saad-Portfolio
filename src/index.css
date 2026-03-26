@@ -8,6 +8,9 @@
 html {
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Acme", sans-serif;

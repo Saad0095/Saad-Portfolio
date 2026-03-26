@@ -1,27 +1,35 @@
 import { motion } from "framer-motion";
 
+import crmImg from "../assets/CRM1.jpg";
+import leadsriftImg from "../assets/Leadsrift website (2).png";
+import uniconnectImg from "../assets/UniConnect 1.png";
+
 const projects = [
   {
-    title: "React E-commerce Fashion & Apparel Store",
-    description:
-      "Developed a full-featured fashion e-commerce site using React and Tailwind CSS. Includes product listings, detailed pages, filters, search, Redux-based cart, checkout, and a light/dark theme toggle for enhanced UX.",
-    tech: ["React", "Tailwind CSS", "Redux"],
-    link: "https://github.com/Saad0095/smh-clothing",
+    title: "Leaders Tax Collection CRM",
+    featured: true,
+    image: crmImg,
+    description: "Developed a full-stack CRM that streamlined lead management, improved workflow efficiency for multi-region agents, and enabled real-time communication.",
+    impact: "Reduced lead management time by 40% and improved agent coordination across Karachi and Dubai offices.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Tailwind"],
+    live: "#",
   },
   {
-    title: "Job Portal",
-    description:
-      "Created a modern job portal with React and Tailwind CSS. Implemented dynamic job search and application UI with login/logout and English/Urdu multi-language support using React-i18next.",
-    tech: ["React", "Tailwind CSS", "React i18next"],
-    link: "https://github.com/Saad0095/job-portal",
+    title: "Leadsrift – Cold Calling Agency Landing Page",
+    image: leadsriftImg,
+    description: "Built a high-converting landing page that showcases services and drives client inquiries.",
+    impact: "Increased qualified leads and client inquiries through optimized conversion design.",
+    tech: ["React", "Tailwind", "Framer Motion"],
+    live: "#",
   },
   {
-    title: "VidStream (YouTube Clone)",
-    description:
-      "Built a responsive video streaming app similar to YouTube using React, Tailwind CSS, and Rapid API. Features include search, light/dark theme toggle and clean UI.",
-    tech: ["React", "Tailwind CSS", "Rapid API"],
-    link: "https://github.com/Saad0095/vidstream",
-  },
+    title: "UniConnect – Student Admission Web App",
+    image: uniconnectImg,
+    description: "Created a role-based admission platform with secure authentication and seamless API integration.",
+    impact: "Simplified student admission process and improved user experience for administrators and students.",
+    tech: ["React", "Tailwind"],
+    live: "#",
+  }
 ];
 
 const Projects = () => {
@@ -35,38 +43,34 @@ const Projects = () => {
       >
         Projects
       </motion.h2>
-
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
+            key={project.title}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
-            className="bg-[#1a1a1a]/60 backdrop-blur-md p-6 rounded-xl shadow-md transition duration-300 border border-transparent hover:shadow-lg hover:scale-105 hover:border-theme-color flex flex-col justify-between"
+            className={`relative bg-[#1a1a1a]/70 backdrop-blur-md p-6 rounded-2xl shadow-xl border-2 transition-all duration-300 flex flex-col justify-between ${project.featured ? 'border-theme-color scale-105 shadow-theme-color/30' : 'border-transparent hover:border-theme-color hover:scale-105'}`}
           >
-            <h3 className="text-2xl font-semibold text-theme-color mb-2">
-              {project.title}
-            </h3>
-            <p className="text-gray-300 mb-4">{project.description}</p>
+            {project.featured && (
+              <span className="absolute top-4 right-4 bg-theme-color text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">Featured Project</span>
+            )}
+            <img src={project.image} alt={project.title} className="w-full h-44 object-cover rounded-xl mb-5 border border-theme-color/20 shadow-md" />
+            <h3 className="text-2xl font-bold text-theme-color mb-2">{project.title}</h3>
+            <p className="text-gray-300 mb-3">{project.description}</p>
+            {project.impact && (
+              <p className="text-sm text-theme-color/80 font-semibold mb-4 italic">"Impact: {project.impact}"</p>
+            )}
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.map((t, i) => (
                 <span
                   key={i}
-                  className="text-sm px-2 py-1 bg-theme-color text-white rounded-md"
+                  className="text-xs px-2 py-1 bg-theme-color/20 text-theme-color border border-theme-color rounded-md font-semibold"
                 >
                   {t}
                 </span>
               ))}
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-theme-color font-medium hover:underline"
-            >
-              View Code →
-            </a>
           </motion.div>
         ))}
       </div>
