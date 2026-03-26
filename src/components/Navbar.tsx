@@ -19,7 +19,7 @@ const Navbar = () => {
     <div>
 
       <nav className="bg-[#0C0C0C] fixed z-50 h-16 w-full flex justify-between items-center px-6 md:px-20 py-5 shadow-md">
-        <h1 className="font-bold text-3xl text-white tracking-wide hover:text-theme-color transition duration-300">
+        <h1 className="font-bold text-3xl text-theme-color tracking-wide hover:text-emerald-500 transition duration-300">
           {"Saad</>"}
         </h1>
 

@@ -30,7 +30,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <a href="#contact">
-            <button className="bg-theme-color hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 text-lg w-full sm:w-auto cursor-pointer">Start a Project</button>
+            <button className="bg-theme-color hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 text-lg w-full sm:w-auto cursor-pointer">Start a Project</button>
           </a>
           <a href="#projects">
             <button className="bg-white text-theme-color font-bold py-3 px-8 rounded-full shadow-lg hover:bg-theme-color hover:text-white transition-all duration-300 text-lg w-full sm:w-auto border-2 border-theme-color cursor-pointer">View My Work</button>
