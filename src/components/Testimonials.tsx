@@ -5,21 +5,24 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight, FaBuilding } from "react-ic
 const testimonials = [
   {
     name: "Ali Hasan Rajani",
-    company: "Leadsrift Agency",
-    role: "Agency Founder",
-    feedback: "Saad delivered a high-converting landing page for our agency. The process was smooth, and the results exceeded expectations!",
+    company: "Cleanmeets",
+    role: "CEO",
+    feedback:
+      "Saad handled our website development professionally and was easy to communicate with throughout the project. He understood what we needed, implemented the required features carefully, and was responsive whenever changes or improvements were needed. Overall, I had a good experience working with him and would recommend him for web development projects.",
   },
   {
     name: "Musaiyab Waseem",
     company: "MeetsNex",
     role: "Founder",
-    feedback: "I worked with Saad, and the experience has been great so far. They helped us successfully complete our website project and were professional, responsive, and easy to work with throughout the process. I really appreciate their support and would definitely recommend them to anyone looking for reliable web development or kinda digital services.",
+    feedback:
+      "I worked with Saad, and the experience has been great so far. They helped us successfully complete our website project and were professional, responsive, and easy to work with throughout the process. I really appreciate their support and would definitely recommend them to anyone looking for reliable web development or kinda digital services.",
   },
   {
     name: "Hamza",
-    company: "Leaders Tax Collection",
-    role: "Operations Lead",
-    feedback: "Our CRM project was complex, but Saad handled it with expertise and clear communication throughout.",
+    company: "LeadsRift",
+    role: "CEO",
+    feedback:
+      "Saad worked with us on a CRM project that involved multiple workflows and user requirements. He took the time to understand how our team operates and translated those requirements into a functional system. Communication was clear throughout the development process, and he was willing to make adjustments based on our feedback.",
   }
 ];
 
