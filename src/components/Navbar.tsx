@@ -1,147 +1,138 @@
-import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import { FaBarsStaggered } from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { FaTimes, FaBars } from "react-icons/fa";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#projects" },
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Tech Stack", href: "#skills" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Feedback", href: "#testimonials" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const { scrollYProgress } = useScroll();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "projects", "skills", "contact"];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-3 sm:p-4 pointer-events-none">
       {/* Top Reading Progress Bar */}
       <motion.div
-        className="h-[2px] bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-300 fixed top-0 left-0 right-0 origin-left z-50"
+        className="h-[2px] bg-emerald-400 fixed top-0 left-0 right-0 origin-left z-50 pointer-events-none"
         style={{ scaleX: scrollYProgress }}
       />
 
-      <nav className="bg-[#09090b]/85 backdrop-blur-md border-b border-[#27272a]/60 h-16 w-full px-4 sm:px-8 lg:px-12 flex justify-between items-center transition-all">
+      {/* Floating Pill Nav */}
+      <div className="pointer-events-auto w-full max-w-4xl bg-[#09090b]/80 backdrop-blur-xl border border-zinc-800/90 rounded-full px-4 sm:px-6 py-2.5 shadow-2xl shadow-black/80 flex items-center justify-between transition-all">
+        
         {/* Brand Logo */}
         <a
           href="#"
-          className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-md p-1"
+          className="flex items-center gap-2 text-sm font-mono font-bold text-zinc-100 hover:text-emerald-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
         >
-          <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-sm group-hover:border-emerald-400 group-hover:bg-emerald-500/20 transition-all">
-            S
-          </div>
-          <span className="font-mono text-base font-bold text-zinc-100 tracking-tight">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
+          <span>
             saad<span className="text-emerald-400">.dev</span>
           </span>
         </a>
 
-        {/* Center Live Availability Badge (Desktop) */}
-        <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span>Available for Full-Stack & SaaS projects</span>
-        </div>
-
-        {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="hover:text-emerald-400 transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+        {/* Desktop Nav Links */}
+        <ul className="hidden md:flex items-center gap-1 text-xs font-medium text-zinc-400">
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.substring(1);
+            return (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className={`relative px-3.5 py-1.5 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                    isActive ? "text-zinc-100 font-semibold" : "hover:text-zinc-200"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="activePill"
+                      className="absolute inset-0 rounded-full bg-zinc-800/80 border border-zinc-700/60 -z-10"
+                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    />
+                  )}
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Desktop Let's Talk CTA */}
+        <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs font-semibold tracking-wide text-zinc-900 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer"
+            className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer"
           >
             Let's Talk
           </a>
         </div>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Toggle Trigger */}
         <button
-          className="md:hidden p-2 text-zinc-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-lg cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Navigation Menu"
+          className="md:hidden p-1.5 text-zinc-300 hover:text-white focus-visible:outline-none rounded-lg cursor-pointer"
+          aria-label="Toggle navigation menu"
         >
-          {isOpen ? <FaTimes size={22} /> : <FaBarsStaggered size={22} />}
+          {isOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
         </button>
-      </nav>
 
-      {/* Mobile Drawer */}
+      </div>
+
+      {/* Clean Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+          <motion.div
+            initial={{ opacity: 0, y: -10, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="pointer-events-auto fixed top-16 left-4 right-4 bg-[#121215] border border-zinc-800 rounded-2xl p-6 shadow-2xl z-50 md:hidden flex flex-col gap-4"
+          >
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-sm font-medium text-zinc-300 hover:text-emerald-400 py-2 border-b border-zinc-800/60 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"
-            />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 w-4/5 max-w-sm h-screen bg-[#121215] border-l border-[#27272a] p-6 flex flex-col justify-between z-50 md:hidden"
+              className="w-full text-center py-2.5 rounded-xl text-xs font-bold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all mt-2"
             >
-              <div>
-                <div className="flex items-center justify-between pb-6 border-b border-[#27272a]">
-                  <span className="font-mono text-base font-bold text-zinc-100">
-                    saad<span className="text-emerald-400">.dev</span>
-                  </span>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-zinc-400 hover:text-white"
-                    aria-label="Close menu"
-                  >
-                    <FaTimes size={20} />
-                  </button>
-                </div>
-
-                <div className="py-6 flex flex-col gap-4">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="text-base font-medium text-zinc-300 hover:text-emerald-400 py-2 border-b border-[#18181b] transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4 pt-6 border-t border-[#27272a]">
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span>Available for work</span>
-                </div>
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full text-center py-3 rounded-lg text-sm font-bold text-zinc-900 bg-emerald-400 hover:bg-emerald-300 transition-all"
-                >
-                  Let's Talk
-                </a>
-              </div>
-            </motion.div>
-          </>
+              Let's Talk
+            </a>
+          </motion.div>
         )}
       </AnimatePresence>
     </header>
@@ -149,4 +140,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

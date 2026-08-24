@@ -1,6 +1,6 @@
 import DevImg from "../assets/developer_image.jpg";
 import { motion } from "framer-motion";
-import Resume from "../assets/Saad - Frontend Developer Resume.pdf";
+import Resume from "../assets/Saad - Full Stack Developer Resume.pdf";
 import { FaDownload, FaGraduationCap, FaCode, FaRocket } from "react-icons/fa";
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          
+
           {/* Developer Image & Status Box */}
           <div className="lg:col-span-5 flex justify-center">
             <motion.div

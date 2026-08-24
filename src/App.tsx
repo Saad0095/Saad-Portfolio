@@ -1,3 +1,4 @@
+import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CapabilityStrip from './components/CapabilityStrip';
@@ -11,7 +12,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-[#09090b] text-zinc-100 min-h-screen selection:bg-emerald-500/30 selection:text-emerald-300 font-sans antialiased overflow-x-hidden">
+    <div className="bg-[#09090b] text-zinc-100 min-h-screen selection:bg-emerald-500/30 selection:text-emerald-300 font-sans antialiased overflow-x-hidden relative">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
@@ -28,5 +30,7 @@ function App() {
   );
 }
 
+
 export default App;
+
 

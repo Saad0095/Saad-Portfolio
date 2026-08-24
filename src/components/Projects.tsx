@@ -1,71 +1,73 @@
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub, FaCheckCircle, FaRobot, FaUsers, FaDatabase, FaShieldAlt, FaDesktop, FaChartLine } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaCheckCircle, FaUsers, FaDatabase, FaShieldAlt, FaChartLine } from "react-icons/fa";
 
-import crmImg from "../assets/CRM1.jpg";
-import leadsriftImg from "../assets/Leadsrift website (2).png";
+import crmImg from "../assets/Cleanmeets CRM (1).jpg";
+import schoolSyncImg from "../assets/SchoolSync.jpeg";
+import meetsnexImg from "../assets/meetsnex (1).jpg";
+import devphicScraperImg from "../assets/Devphic Scraper.jpeg";
 
 const Projects = () => {
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b]">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase mb-4"
           >
-            <span>FEATURED ENGINEERING WORK</span>
+            <span>FEATURED PRODUCT SHOWCASE</span>
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl font-extrabold text-zinc-100 tracking-tight"
           >
-            Production Products & SaaS Systems
+            SaaS Applications & Engineering Systems
           </motion.h2>
-          
+
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-base sm:text-lg text-zinc-400 max-w-2xl mt-4"
+            className="text-base sm:text-lg text-zinc-400 max-w-2xl mt-3"
           >
-            Real software built for operational workflows — featuring role-based access, AI integrations, data pipelines, and real-time APIs.
+            Complete software products built for real operational workflows — featuring multi-role access control, AI integrations, data pipelines, and APIs.
           </motion.p>
         </div>
 
-        <div className="space-y-20">
-          
+        <div className="space-y-24">
+
           {/* =========================================================
-              01 — CleanMeets CRM (Dominant Feature Showcase)
+              01 — CleanMeets CRM (Dominant Product Showcase)
              ========================================================= */}
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative bg-[#121215] border border-emerald-500/30 rounded-2xl overflow-hidden shadow-2xl emerald-glow"
+            className="relative bg-[#121215] border border-zinc-800/90 rounded-2xl overflow-hidden shadow-2xl hover:border-emerald-500/40 transition-all duration-300 group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 lg:p-10">
-              
-              {/* Left Column: Technical Narrative & RBAC */}
+
+              {/* Left Column: Narrative & Technical Specs */}
               <div className="lg:col-span-7 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-xl font-bold text-emerald-400">01</span>
+                    <span className="font-mono text-3xl font-extrabold text-emerald-400">01</span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-xs font-semibold uppercase">
                       Sales CRM / Business SaaS
                     </span>
-                    <span className="px-2.5 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px]">
-                      PRIMARY FEATURED
+                    <span className="hidden sm:inline-block px-2.5 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px]">
+                      FLAGSHIP PRODUCT
                     </span>
                   </div>
 
@@ -77,30 +79,30 @@ const Projects = () => {
                     A complete CRM built around real sales and lead-management workflows. Engineered with granular role-based permissions, live call agent routing, and real-time updates for multi-region teams.
                   </p>
 
-                  {/* Highlighted Functionality Grid */}
+                  {/* Highlighted Architecture Features */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-lg p-3">
+                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
                       <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaShieldAlt /> Multi-Role Architecture (RBAC)
+                        <FaShieldAlt /> Multi-Role Access (RBAC)
                       </div>
                       <p className="text-xs text-zinc-400">Admin, Manager, Caller-Agent, and Closer-Agent role hierarchies with distinct permission boundaries.</p>
                     </div>
 
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-lg p-3">
+                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
                       <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
                         <FaDatabase /> Lead Pipeline & CSV Import
                       </div>
                       <p className="text-xs text-zinc-400">Automated lead assignment, CSV bulk data import, status tracking, and call history logging.</p>
                     </div>
 
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-lg p-3">
+                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
                       <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaUsers /> Live Socket.IO Workflows
+                        <FaUsers /> Socket.IO Workflows
                       </div>
                       <p className="text-xs text-zinc-400">Real-time caller/closer agent notifications, lead handoffs, and operational status sync.</p>
                     </div>
 
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-lg p-3">
+                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
                       <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
                         <FaChartLine /> Executive Dashboards & REST
                       </div>
@@ -109,11 +111,11 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Tech Stack & Links */}
+                {/* Tech Stack & Action Links */}
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-6">
                     {["React", "Vite", "Node.js", "Express", "MongoDB", "JWT", "Socket.IO", "Tailwind CSS"].map((tech) => (
-                      <span key={tech} className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono text-xs">
+                      <span key={tech} className="px-2.5 py-1 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-xs">
                         {tech}
                       </span>
                     ))}
@@ -122,29 +124,36 @@ const Projects = () => {
                   <div className="flex items-center gap-4">
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md cursor-pointer"
                     >
-                      <span>Discuss CRM Implementation</span>
+                      <span>Discuss Implementation</span>
                       <FaExternalLinkAlt size={11} />
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Screenshot & Interface Mockup */}
+              {/* Right Column: Browser Window Chrome Mockup */}
               <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="relative rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl group">
-                  <div className="flex items-center justify-between px-3 py-2 bg-[#09090b] border-b border-zinc-800 text-[11px] font-mono text-zinc-400">
-                    <span>cleanmeets-crm.app/dashboard</span>
-                    <span className="text-emerald-400">LIVE INSTANCE</span>
+                <div className="relative rounded-xl overflow-hidden bg-[#09090b] border border-zinc-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                  {/* Browser Header Bar */}
+                  <div className="flex items-center justify-between px-3 py-2 bg-[#121215] border-b border-zinc-800 text-[11px] font-mono text-zinc-400">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
+                    </div>
+                    <span className="text-zinc-500 text-[11px]">cleanmeets-crm.app</span>
+                    <span className="text-emerald-400 font-bold">ONLINE</span>
                   </div>
+                  {/* Image Viewport */}
                   <img
                     src={crmImg}
-                    alt="CleanMeets CRM Dashboard Showcase"
-                    className="w-full h-auto max-h-[380px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    alt="CleanMeets CRM Dashboard"
+                    className="w-full h-auto max-h-[380px] object-cover object-top"
                   />
-                  <div className="p-3 bg-[#121215] border-t border-zinc-800/80 text-xs text-zinc-400 flex items-center justify-between font-mono">
-                    <span>ROLE: ADMIN / CALLER AGENT</span>
+                  <div className="p-3 bg-[#121215] border-t border-zinc-800 text-xs text-zinc-400 flex items-center justify-between font-mono">
+                    <span>ROLE: ADMIN / AGENT</span>
                     <span className="text-emerald-400">SOCKET READY</span>
                   </div>
                 </div>
@@ -162,57 +171,39 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative bg-[#121215] border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl hover:border-emerald-500/40 transition-all"
+            className="relative bg-[#121215] border border-zinc-800/90 rounded-2xl overflow-hidden shadow-2xl hover:border-emerald-500/40 transition-all duration-300 group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-8 lg:p-10">
-              
-              {/* Left Column: UI Mockup Showcase */}
+
+              {/* Left Column: Browser Window Screenshot Showcase */}
               <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
-                <div className="bg-[#09090b] border border-zinc-800 rounded-xl p-5 font-mono text-xs space-y-4">
-                  <div className="flex items-center justify-between pb-3 border-b border-zinc-800">
-                    <span className="text-emerald-400 font-bold flex items-center gap-2">
-                      <FaRobot /> SCHOOLSYNC AI ENGINE
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px]">
-                      SaaS V2.0
-                    </span>
-                  </div>
-
-                  {/* AI Circular Generator Box */}
-                  <div className="p-3 bg-[#141418] rounded-lg border border-zinc-800">
-                    <div className="flex items-center justify-between text-zinc-400 text-[11px] mb-1">
-                      <span>MODULE: AI CIRCULAR GENERATOR</span>
-                      <span className="text-emerald-400">OPENAI</span>
+                <div className="relative rounded-xl overflow-hidden bg-[#09090b] border border-zinc-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                  <div className="flex items-center justify-between px-3 py-2 bg-[#121215] border-b border-zinc-800 text-[11px] font-mono text-zinc-400">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
                     </div>
-                    <p className="text-zinc-300 text-[11px]">
-                      "Generates official campus notices, exam schedules, and holiday announcements in formatted PDF & HTML."
-                    </p>
+                    <span className="text-zinc-500 text-[11px]">schoolsync-saas.app</span>
+                    <span className="text-emerald-400 font-bold">AI ONLINE</span>
                   </div>
-
-                  {/* Fee Management & Report Cards */}
-                  <div className="grid grid-cols-2 gap-2 text-[11px]">
-                    <div className="p-2.5 bg-[#141418] rounded border border-zinc-800">
-                      <div className="text-zinc-400">FEE SYSTEM</div>
-                      <div className="text-emerald-400 font-semibold mt-0.5">Automated Vouchers</div>
-                    </div>
-                    <div className="p-2.5 bg-[#141418] rounded border border-zinc-800">
-                      <div className="text-zinc-400">AI ASSISTANT</div>
-                      <div className="text-emerald-400 font-semibold mt-0.5">Report Card Comments</div>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 border-t border-zinc-800 text-zinc-500 text-[11px] flex justify-between">
-                    <span>ACADEMIC ROLES: ADMIN / TEACHER / STUDENT</span>
-                    <span className="text-emerald-400">ACTIVE</span>
+                  <img
+                    src={schoolSyncImg}
+                    alt="SchoolSync SaaS Platform Screenshot"
+                    className="w-full h-auto max-h-[380px] object-cover object-top"
+                  />
+                  <div className="p-3 bg-[#121215] border-t border-zinc-800 text-xs text-zinc-400 flex items-center justify-between font-mono">
+                    <span>ACADEMIC WORKFLOWS</span>
+                    <span className="text-emerald-400">AI ASSISTED</span>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Details & AI Features */}
+              {/* Right Column: Narrative & AI Highlights */}
               <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-xl font-bold text-emerald-400">02</span>
+                    <span className="font-mono text-3xl font-extrabold text-emerald-400">02</span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-xs font-semibold uppercase">
                       AI-Powered School Management SaaS
                     </span>
@@ -226,14 +217,14 @@ const Projects = () => {
                     A modern school management platform with practical AI integrated into everyday academic and administrative workflows — transforming fee management, teacher tasks, and parent communication.
                   </p>
 
-                  <div className="space-y-2.5 mb-6 text-xs sm:text-sm text-zinc-300">
+                  <div className="space-y-3 mb-6 text-xs sm:text-sm text-zinc-300">
                     <div className="flex items-start gap-2.5">
                       <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
-                      <span><strong>School & Campus Management:</strong> Student rosters, teacher assignments, homework tracking, and role-based access.</span>
+                      <span><strong>School & Campus Management:</strong> Student rosters, teacher assignments, homework tracking, and role-based access controls.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
-                      <span><strong>Fee Management & Voucher System:</strong> Automated fee calculation, voucher generation, and payment status tracking.</span>
+                      <span><strong>Fee Management & Voucher System:</strong> Automated fee calculations, voucher generation, and payment status tracking.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
@@ -245,7 +236,7 @@ const Projects = () => {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-6">
                     {["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Tailwind CSS", "RBAC"].map((tech) => (
-                      <span key={tech} className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono text-xs">
+                      <span key={tech} className="px-2.5 py-1 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-xs">
                         {tech}
                       </span>
                     ))}
@@ -254,7 +245,7 @@ const Projects = () => {
                   <div className="flex items-center gap-4">
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-md cursor-pointer"
                     >
                       <span>Explore SaaS Architecture</span>
                       <FaExternalLinkAlt size={11} />
@@ -271,35 +262,43 @@ const Projects = () => {
               03 & 04 Grid (MeetsNex & Devphic Lead Scraper)
              ========================================================= */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
+
             {/* 03 — MeetsNex */}
             <motion.article
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="bg-[#121215] border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all"
+              className="bg-[#121215] border border-zinc-800/90 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-lg font-bold text-emerald-400">03</span>
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-2xl font-extrabold text-emerald-400">03</span>
                     <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-mono text-xs uppercase">
                       Modern Business Website
                     </span>
                   </div>
                 </div>
 
-                <div className="rounded-xl overflow-hidden border border-zinc-800 mb-6 group">
+                {/* Browser Window Mockup */}
+                <div className="rounded-xl overflow-hidden border border-zinc-800 mb-6 bg-[#09090b]">
+                  <div className="flex items-center justify-between px-3 py-1.5 bg-[#121215] border-b border-zinc-800 text-[10px] font-mono text-zinc-500">
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-zinc-700 inline-block" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700 inline-block" />
+                    </div>
+                    <span>meetsnex.com</span>
+                  </div>
                   <img
-                    src={leadsriftImg}
-                    alt="MeetsNex Landing Page Preview"
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    src={meetsnexImg}
+                    alt="MeetsNex Landing Page Screenshot"
+                    className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-100 mb-2">
-                  MeetsNex / Leadsrift
+                  MeetsNex Business Website
                 </h3>
 
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
@@ -319,7 +318,7 @@ const Projects = () => {
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-6">
                   {["React", "Tailwind CSS", "Framer Motion", "Vite"].map((tech) => (
-                    <span key={tech} className="px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono text-[11px]">
+                    <span key={tech} className="px-2 py-0.5 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-[11px]">
                       {tech}
                     </span>
                   ))}
@@ -331,7 +330,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300"
                 >
-                  <FaGithub /> View Frontend Code base
+                  <FaGithub /> View Codebase on GitHub
                 </a>
               </div>
             </motion.article>
@@ -343,39 +342,32 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#121215] border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all"
+              className="bg-[#121215] border border-zinc-800/90 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-lg font-bold text-emerald-400">04</span>
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-2xl font-extrabold text-emerald-400">04</span>
                     <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-mono text-xs uppercase">
                       Lead Generation / Automation
                     </span>
                   </div>
                 </div>
 
-                <div className="bg-[#09090b] border border-zinc-800 rounded-xl p-4 font-mono text-xs space-y-2 mb-6">
-                  <div className="flex items-center justify-between pb-2 border-b border-zinc-800 text-zinc-400">
-                    <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
-                      <FaDesktop /> DEVPHIC SCRAPER BOT
-                    </span>
-                    <span className="text-[10px] text-teal-400">LICENSE VERIFIED</span>
+                {/* Dashboard Desktop Window Mockup */}
+                <div className="rounded-xl overflow-hidden border border-zinc-800 mb-6 bg-[#09090b]">
+                  <div className="flex items-center justify-between px-3 py-1.5 bg-[#121215] border-b border-zinc-800 text-[10px] font-mono text-zinc-500">
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-zinc-700 inline-block" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700 inline-block" />
+                    </div>
+                    <span>devphic-scraper.app</span>
                   </div>
-                  <div className="text-[11px] text-zinc-300 space-y-1">
-                    <div className="flex justify-between">
-                      <span className="text-zinc-500">Extraction Engine:</span>
-                      <span>Automated Data Scraping</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zinc-500">Outreach Module:</span>
-                      <span>Cold-Email Pipeline</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zinc-500">Data Format:</span>
-                      <span className="text-emerald-400">CRM-Ready CSV / JSON</span>
-                    </div>
-                  </div>
+                  <img
+                    src={devphicScraperImg}
+                    alt="Devphic Lead Scraper Screenshot"
+                    className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold text-zinc-100 mb-2">
@@ -399,7 +391,7 @@ const Projects = () => {
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-6">
                   {["Node.js", "Puppeteer", "Python", "REST APIs", "Automation"].map((tech) => (
-                    <span key={tech} className="px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono text-[11px]">
+                    <span key={tech} className="px-2 py-0.5 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-[11px]">
                       {tech}
                     </span>
                   ))}
@@ -411,7 +403,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300"
                 >
-                  <FaGithub /> View GitHub Projects
+                  <FaGithub /> View Repositories on GitHub
                 </a>
               </div>
             </motion.article>
@@ -426,4 +418,6 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
 
