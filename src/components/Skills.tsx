@@ -1,74 +1,133 @@
 import { motion } from "framer-motion";
-import { FaReact, FaGitAlt, FaNodeJs, FaJs } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiFirebase, SiRapid } from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { FaReact, FaNodeJs, FaJs, FaGitAlt, FaGithub, FaLinux, FaDocker, FaRobot, FaLock } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiNextdotjs, SiVercel, SiNginx, SiSocketdotio, SiPuppeteer } from "react-icons/si";
 
-const skillGroups = [
+const skillCategories = [
   {
-    label: "Frontend",
+    category: "Frontend",
     skills: [
-      { name: "React", icon: <FaReact className="text-cyan-400 text-4xl" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 text-4xl" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-600 text-4xl" /> },
-      { name: "Framer Motion", icon: <TbBrandFramerMotion className="text-white text-4xl" /> },
+      { name: "React", icon: <FaReact className="text-cyan-400" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "JavaScript", icon: <FaJs className="text-amber-400" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
     ],
   },
   {
-    label: "Backend",
+    category: "Backend",
     skills: [
-      { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
-      { name: "Express.js", icon: <SiExpress className="text-gray-300 text-4xl" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-400 text-4xl" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-4xl" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-emerald-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-zinc-300" /> },
+      { name: "REST APIs", icon: <FaNodeJs className="text-teal-400" /> },
+      { name: "JWT", icon: <FaLock className="text-amber-400" /> },
+      { name: "RBAC Controls", icon: <FaLock className="text-emerald-400" /> },
+      { name: "Socket.IO", icon: <SiSocketdotio className="text-white" /> },
     ],
   },
   {
-    label: "Tools & Services",
+    category: "Database",
     skills: [
-      { name: "Git & GitHub", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
-      { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-4xl" /> },
-      { name: "Rapid API", icon: <SiRapid className="text-red-400 text-4xl" /> },
-      { name: "Socket.IO", icon: <SiExpress className="text-gray-300 text-4xl" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-emerald-500" /> },
+    ],
+  },
+  {
+    category: "AI & Automation",
+    skills: [
+      { name: "AI Integrations", icon: <FaRobot className="text-emerald-400" /> },
+      { name: "Automation Bots", icon: <FaRobot className="text-teal-400" /> },
+      { name: "Puppeteer", icon: <SiPuppeteer className="text-emerald-300" /> },
+      { name: "Data Extraction", icon: <FaRobot className="text-cyan-400" /> },
+    ],
+  },
+  {
+    category: "Deployment & DevOps",
+    skills: [
+      { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+      { name: "GitHub", icon: <FaGithub className="text-white" /> },
+      { name: "Vercel", icon: <SiVercel className="text-white" /> },
+      { name: "Linux", icon: <FaLinux className="text-amber-300" /> },
+      { name: "Nginx", icon: <SiNginx className="text-emerald-600" /> },
+      { name: "PM2", icon: <FaNodeJs className="text-emerald-400" /> },
+      { name: "Docker", icon: <FaDocker className="text-blue-400" /> },
     ],
   },
 ];
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="bg-[#0C0C0C] py-20 px-6 md:px-20 text-white">
-      <motion.h2
-        className="text-4xl md:text-5xl font-extrabold mb-12 text-center tracking-wide"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        My Tech Stack
-      </motion.h2>
-      <div className="flex flex-col md:flex-row gap-10 md:gap-16 justify-center items-start max-w-5xl mx-auto">
-        {skillGroups.map((group, idx) => (
+    <section id="skills" className="bg-[#09090b] py-24 px-4 sm:px-6 lg:px-12 border-t border-[#27272a]/60">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center mb-16">
           <motion.div
-            key={group.label}
-            className="flex-1 bg-[#1a1a1a]/60 backdrop-blur-md rounded-2xl shadow-lg p-7 border border-transparent hover:border-theme-color transition-all duration-300"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase mb-4"
           >
-            <h3 className="text-xl font-bold text-theme-color mb-5 text-center md:text-left">{group.label}</h3>
-            <div className="grid grid-cols-2 gap-6">
-              {group.skills.map((skill) => (
-                <div key={skill.name} className="flex flex-col items-center gap-2 group">
-                  <span className="transition-transform duration-300 group-hover:scale-110">
-                    {skill.icon}
-                  </span>
-                  <span className="text-base font-medium text-gray-200 group-hover:text-theme-color transition-colors duration-300">{skill.name}</span>
-                </div>
-              ))}
-            </div>
+            <span>TECHNICAL PROFICIENCY</span>
           </motion.div>
-        ))}
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight"
+          >
+            Technology Stack & Tools
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-sm sm:text-base text-zinc-400 max-w-xl mt-3"
+          >
+            Technologies genuinely supported by hands-on development and production project experience.
+          </motion.p>
+        </div>
+
+        {/* 5 Category Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((group, idx) => (
+            <motion.div
+              key={group.category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              viewport={{ once: true }}
+              className="bg-[#121215] border border-zinc-800 rounded-xl p-6 hover:border-emerald-500/30 transition-all flex flex-col justify-between"
+            >
+              <div>
+                <h3 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-4 pb-2 border-b border-zinc-800">
+                  {group.category}
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
+                  {group.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#18181b] border border-zinc-800 text-xs font-medium text-zinc-200 hover:border-emerald-500/40 hover:text-white transition-all group"
+                    >
+                      <span className="text-sm transition-transform group-hover:scale-110">
+                        {skill.icon}
+                      </span>
+                      <span>{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 };
 
 export default SkillsSection;
+

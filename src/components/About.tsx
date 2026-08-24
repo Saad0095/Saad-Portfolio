@@ -1,83 +1,141 @@
 import DevImg from "../assets/developer_image.jpg";
 import { motion } from "framer-motion";
-import Resume from "../assets/Saad - Frontend Developer Resume.pdf"
+import Resume from "../assets/Saad - Frontend Developer Resume.pdf";
+import { FaDownload, FaGraduationCap, FaCode, FaRocket } from "react-icons/fa";
 
 const About = () => {
-  const aboutPoints = [
+  const highlights = [
     {
-      title: "Who I Am",
-      description: "Muhammad Saad Bin Khalid, a results-driven Full Stack Developer building high-converting web solutions for startups and businesses."
+      icon: FaGraduationCap,
+      title: "Computer Science Background",
+      description: "CS student with a deep focus on software engineering principles, full-stack architecture, data structures, and production-ready applications."
     },
     {
-      title: "What I Do",
-      description: "I create clean, responsive web apps and scalable backend systems that turn ideas into production-ready products that drive business growth."
+      icon: FaCode,
+      title: "Full-Stack & System Design",
+      description: "Adept at unifying frontend UIs (React/Next.js) with scalable REST backends (Node.js/Express), database models (MongoDB), and RBAC access controls."
     },
     {
-      title: "What You Deliver",
-      description: "Modern, fast, and conversion-focused web applications that help clients stand out online with visually stunning and user-friendly experiences."
+      icon: FaRocket,
+      title: "Product-First Engineering",
+      description: "Focused on solving business pain points by shipping complete SaaS platforms, multi-role CRMs/ERPs, AI workflows, and desktop automation tools."
     }
   ];
 
   return (
-    <div id="about" className="py-20 px-4 flex flex-col justify-center items-center mx-auto md:w-10/12">
-      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10 mb-12">
-        <div className="w-full md:w-1/2 flex justify-center">
-          <motion.img
-            src={DevImg}
-            alt="Muhammad Saad Bin Khalid - Full Stack Developer"
-            className="max-w-xs md:max-w-sm h-auto object-contain rounded-2xl shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          />
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b]">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          
+          {/* Developer Image & Status Box */}
+          <div className="lg:col-span-5 flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative w-full max-w-sm"
+            >
+              <div className="relative rounded-2xl overflow-hidden bg-[#121215] border border-zinc-800 p-2 shadow-2xl">
+                <img
+                  src={DevImg}
+                  alt="Muhammad Saad Bin Khalid"
+                  className="w-full h-80 object-cover object-center rounded-xl"
+                />
+                <div className="mt-3 p-3 bg-[#18181b] rounded-lg border border-zinc-800 flex items-center justify-between text-xs font-mono">
+                  <span className="text-zinc-400">LOCATION</span>
+                  <span className="text-emerald-400 font-semibold">Karachi, Pakistan (PKT)</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* About Narrative */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold mb-4"
+            >
+              <span>ABOUT THE DEVELOPER</span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight leading-tight mb-6"
+            >
+              Building end-to-end software products with focus on usability and architecture.
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-zinc-300 leading-relaxed text-base mb-6"
+            >
+              I am a Computer Science student and Full-Stack Developer who specializes in crafting production-ready software solutions. Rather than building static mockups, I focus on engineering complete applications — handling frontend interfaces, REST API architecture, database schemas, multi-role security, real-time messaging, and practical AI integrations.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              viewport={{ once: true }}
+              className="text-zinc-400 leading-relaxed text-sm mb-8"
+            >
+              Whether it's a multi-role sales CRM with live caller workflows, an AI-powered school SaaS handling fee vouchers, or desktop automation bots for lead extraction — my approach is rooted in code readability, system security, and business value.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href={Resume}
+                download="Saad_Bin_Khalid_Resume.pdf"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-sm text-zinc-100 bg-zinc-900 border border-zinc-700 hover:border-emerald-400 hover:text-emerald-400 transition-all shadow-md group cursor-pointer"
+              >
+                <FaDownload className="text-emerald-400 group-hover:translate-y-0.5 transition-transform" />
+                <span>Download Resume</span>
+              </a>
+            </motion.div>
+          </div>
         </div>
-        <div className="w-full md:w-1/2 flex flex-col gap-6">
-          <motion.h2
-            className="text-4xl font-bold text-theme-color"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            About Me
-          </motion.h2>
-          <motion.p
-            className="text-gray-300 leading-relaxed text-lg"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            I'm passionate about building real-world solutions, writing clean code, and continuously improving through hands-on development.
-          </motion.p>
-          <motion.a
-            href={Resume}
-            download="Saad Frontend Dev_Resume.pdf"
-            rel="noopener noreferrer"
-            className="text-base border-2 border-theme-color text-white rounded py-3 font-bold cursor-pointer hover:bg-theme-color w-40 text-center transition-all ease-in-out"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            View Resume
-          </motion.a>
+
+        {/* 3 Pillar Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {highlights.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-[#121215] border border-zinc-800 rounded-xl p-6 hover:border-emerald-500/30 transition-all"
+              >
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                  <Icon size={18} />
+                </div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-2">{item.title}</h3>
+                <p className="text-sm text-zinc-400 leading-relaxed">{item.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-        {aboutPoints.map((point, i) => (
-          <motion.div
-            key={point.title}
-            className="bg-[#1a1a1a]/70 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-transparent hover:border-theme-color transition-all duration-300"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-          >
-            <h3 className="text-xl font-bold text-theme-color mb-3">{point.title}</h3>
-            <p className="text-gray-300 leading-relaxed">{point.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
 export default About;
+

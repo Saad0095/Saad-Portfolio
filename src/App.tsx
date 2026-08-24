@@ -1,31 +1,32 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import About from './components/About'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-
-import Projects from './components/Projects'
-import HowIWork from './components/HowIWork'
-import Testimonials from './components/Testimonials'
-import Services from './components/Services'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import CapabilityStrip from './components/CapabilityStrip';
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Philosophy from './components/Philosophy';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-
   return (
-    <div className='bg-[#0C0C0C] text-white overflow-x-hidden font-primary'>
+    <div className="bg-[#09090b] text-zinc-100 min-h-screen selection:bg-emerald-500/30 selection:text-emerald-300 font-sans antialiased overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects/>
-      <HowIWork/>
-      <Testimonials/>
-      <Services/>
-      <Contact />
+      <main>
+        <Hero />
+        <CapabilityStrip />
+        <About />
+        <Projects />
+        <Skills />
+        <Philosophy />
+        <Testimonials />
+        <Contact />
+      </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
