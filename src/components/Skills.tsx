@@ -21,10 +21,13 @@ const skills = [
 
   { name: "MongoDB", category: "Database", icon: <SiMongodb className="text-emerald-500" /> },
 
-  { name: "AI Integrations", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
+  { name: "Generative AI", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
+  { name: "LLM Integrations", category: "AI & Automation", icon: <FaRobot className="text-teal-400" /> },
+  { name: "Agentic Workflows", category: "AI & Automation", icon: <FaRobot className="text-cyan-400" /> },
+  { name: "Prompt Engineering", category: "AI & Automation", icon: <FaRobot className="text-emerald-300" /> },
+  { name: "OpenAI API", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
   { name: "Automation Bots", category: "AI & Automation", icon: <FaRobot className="text-teal-400" /> },
   { name: "Puppeteer", category: "AI & Automation", icon: <SiPuppeteer className="text-emerald-300" /> },
-  { name: "Data Extraction", category: "AI & Automation", icon: <FaRobot className="text-cyan-400" /> },
 
   { name: "Git", category: "DevOps", icon: <FaGitAlt className="text-orange-500" /> },
   { name: "GitHub", category: "DevOps", icon: <FaGithub className="text-white" /> },

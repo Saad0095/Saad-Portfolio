@@ -79,7 +79,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-zinc-300 leading-relaxed text-base sm:text-lg mb-8"
             >
-              I am a Full-Stack Developer and Computer Science student who creates clean, modern, and reliable web products. Whether you need a high-converting business landing page, an e-commerce platform, a custom CRM, or an AI-powered web application — I focus on responsive design, fast performance, and real business value.
+              I am a Full-Stack Developer and Computer Science student who creates clean, modern, and reliable web products. Whether you need a high-converting business landing page, an e-commerce platform, a custom CRM, or an intelligent AI-powered web application — I leverage full-stack web technologies alongside Generative AI, LLMs, prompt engineering, and agentic workflows to build solutions that deliver real business value.
             </motion.p>
 
             <motion.p

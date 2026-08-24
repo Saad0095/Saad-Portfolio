@@ -5,8 +5,9 @@ const capabilities = [
   "E-Commerce & Web Stores",
   "Custom Web Applications",
   "CRMs & Management Portals",
+  "Generative AI & LLM Workflows",
+  "Agentic Systems & Prompt Engineering",
   "Full-Stack Development",
-  "AI & Automation Tools",
   "API & Database Systems",
 ];
 

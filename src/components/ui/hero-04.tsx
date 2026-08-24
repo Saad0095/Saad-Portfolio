@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles } from "lucide-react";
+import { ArrowDownRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DevImg from "@/assets/developer_image.jpg";
 import crmImg from "@/assets/Cleanmeets CRM (1).jpg";
@@ -10,7 +10,7 @@ export function HeroSection04() {
   return (
     <section className="min-h-screen overflow-hidden relative pt-24 pb-16 bg-[#09090b] text-zinc-100 flex flex-col justify-center select-none">
       {/* Background Radial Light Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-emerald-500/10 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative z-20 px-6 w-full">
         
@@ -21,9 +21,9 @@ export function HeroSection04() {
           transition={{ duration: 0.5 }}
           className="flex justify-center mb-6"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5">
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse" />
-            <span>FULL-STACK DEVELOPER • WEBSITES • WEB APPS • SAAS</span>
+            <span>FULL-STACK & AI DEVELOPER • WEBSITES • WEB APPS • GEN-AI & LLMs</span>
           </div>
         </motion.div>
 
@@ -62,7 +62,7 @@ export function HeroSection04() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="space-y-8 pt-6 flex gap-6 justify-center"
+            className="space-y-8 pt-6 flex flex-col items-center"
           >
             <div className="flex flex-col md:flex-row gap-6 bg-[#121215] border border-zinc-800 rounded-2xl w-full max-w-2xl h-fit p-8 md:p-10 items-start md:items-end justify-between shadow-2xl hover:border-emerald-500/40 transition-all duration-500 group">
               <div className="font-mono text-base md:text-xl space-y-2.5 text-zinc-200">
@@ -81,9 +81,24 @@ export function HeroSection04() {
                   className="h-44 w-36 object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="text-left p-2.5 rotate-180 [writing-mode:vertical-rl] text-[10px] font-mono font-medium tracking-widest text-emerald-400 uppercase">
-                  BASED IN KARACHI, PK
+                  FULL-STACK ENGINEER
                 </div>
               </div>
+            </div>
+
+            {/* Subtle Tech Stack Ticker Pill */}
+            <div className="flex flex-wrap items-center justify-center gap-3 text-[11px] font-mono text-zinc-400 pt-2">
+              <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                <CheckCircle2 className="size-3 text-emerald-400" /> React & Next.js
+              </span>
+              <span className="text-zinc-600">•</span>
+              <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                <CheckCircle2 className="size-3 text-emerald-400" /> Generative AI & Agentic LLMs
+              </span>
+              <span className="text-zinc-600">•</span>
+              <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                <CheckCircle2 className="size-3 text-emerald-400" /> Node.js & MongoDB
+              </span>
             </div>
           </motion.div>
 
@@ -95,7 +110,7 @@ export function HeroSection04() {
               className="h-48 w-full object-cover object-center"
             />
             <div className="text-left p-2.5 rotate-180 [writing-mode:vertical-rl] text-[10px] font-mono font-medium tracking-widest text-emerald-400 uppercase">
-              BASED IN KARACHI, PK
+              FULL-STACK ENGINEER
             </div>
           </div>
         </div>
@@ -105,10 +120,10 @@ export function HeroSection04() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="md:mt-20 mt-10"
+          className="md:mt-16 mt-10"
         >
-          <p className="mx-auto max-w-2xl font-sans text-center text-zinc-300 text-sm md:text-base leading-relaxed">
-            FROM HIGH-CONVERTING LANDING PAGES AND BUSINESS WEBSITES TO CUSTOM WEB APPLICATIONS AND CRMs — I BUILD FAST, MODERN, AND RELIABLE DIGITAL PRODUCTS tailored TO YOUR GOALS.
+          <p className="mx-auto max-w-2xl font-sans text-center text-zinc-300 text-sm md:text-base leading-relaxed uppercase tracking-wide">
+            FROM HIGH-CONVERTING LANDING PAGES AND BUSINESS WEBSITES TO CUSTOM WEB APPLICATIONS AND CRMs — I BUILD FAST, MODERN, AND RELIABLE DIGITAL PRODUCTS TAILORED TO YOUR GOALS.
           </p>
         </motion.div>
 
@@ -119,7 +134,7 @@ export function HeroSection04() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
         >
-          <Button size="lg" asChild className="hover:scale-105 transition-transform">
+          <Button size="lg" asChild className="hover:scale-105 transition-transform shadow-xl shadow-emerald-500/20">
             <a href="#projects" className="cursor-pointer">
               View My Work
             </a>

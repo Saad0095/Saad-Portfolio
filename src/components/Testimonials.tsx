@@ -58,12 +58,15 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase mb-3"
           >
-            <span>CLIENT COLLABORATION</span>
+            <span>CLIENT TESTIMONIALS</span>
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
-            Client Feedback & Recommendations
+            Trusted by Founders & Business Leaders
           </h2>
+          <p className="text-sm text-zinc-400 max-w-lg mt-2">
+            Real feedback from founders, CEOs, and teams I've built software products for.
+          </p>
         </div>
 
         {/* Modern Testimonial Card Slider */}
