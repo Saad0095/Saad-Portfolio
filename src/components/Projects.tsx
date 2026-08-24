@@ -6,6 +6,8 @@ import schoolSyncImg from "../assets/SchoolSync.jpeg";
 import meetsnexImg from "../assets/meetsnex (1).jpg";
 import devphicScraperImg from "../assets/Devphic Scraper.jpeg";
 
+import { Typewriter } from "./ui/typewriter";
+
 const Projects = () => {
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b]">
@@ -30,9 +32,16 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl font-extrabold text-zinc-100 tracking-tight"
           >
-            Websites, Web Apps & Software Projects
+            <Typewriter
+              words={[
+                "Websites, Web Apps & Software Projects",
+                "Featured Products & SaaS Platforms"
+              ]}
+              typingSpeed={60}
+              pauseTime={2500}
+            />
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -219,7 +228,7 @@ const Projects = () => {
 
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-6">
-                    {["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Tailwind CSS", "RBAC"].map((tech) => (
+                    {["React", "Node.js", "Express", "MongoDB", "Groq API", "Tailwind CSS", "RBAC"].map((tech) => (
                       <span key={tech} className="px-2.5 py-1 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-xs">
                         {tech}
                       </span>
@@ -301,7 +310,7 @@ const Projects = () => {
 
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-6">
-                  {["React", "Tailwind CSS", "Framer Motion", "Vite"].map((tech) => (
+                  {["Next.js", "Tailwind CSS", "Framer Motion", "Vite"].map((tech) => (
                     <span key={tech} className="px-2 py-0.5 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-[11px]">
                       {tech}
                     </span>
@@ -374,7 +383,7 @@ const Projects = () => {
 
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-6">
-                  {["Node.js", "Puppeteer", "Python", "REST APIs", "Automation"].map((tech) => (
+                  {["React", "Node.js", "Puppeteer", "Python", "REST APIs", "Automation"].map((tech) => (
                     <span key={tech} className="px-2 py-0.5 rounded bg-[#09090b] border border-zinc-800 text-zinc-300 font-mono text-[11px]">
                       {tech}
                     </span>

@@ -16,7 +16,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase mb-4"
           >
-            <span>START A PROJECT</span>
+            <span>GET IN TOUCH</span>
           </motion.div>
 
           <motion.h2
@@ -26,7 +26,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl font-extrabold text-zinc-100 tracking-tight"
           >
-            Let's Build Your Next Software Product
+            Let's Work Together on Your Next Project
           </motion.h2>
 
           <motion.p
@@ -36,7 +36,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-base sm:text-lg text-zinc-400 max-w-2xl mt-4"
           >
-            Have a SaaS product, CRM/ERP platform, or AI project to build? Reach out below — I typically respond within 24 hours.
+            Whether you need a new business website, an e-commerce online store, a custom web application, or an AI integration — send a message below and I'll get back to you within 24 hours.
           </motion.p>
         </div>
 

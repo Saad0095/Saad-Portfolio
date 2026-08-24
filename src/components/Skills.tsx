@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaReact, FaNodeJs, FaJs, FaGitAlt, FaGithub, FaLinux, FaDocker, FaRobot, FaLock } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiNextdotjs, SiVercel, SiNginx, SiSocketdotio, SiPuppeteer } from "react-icons/si";
 
+import { Typewriter } from "./ui/typewriter";
+
 const categories = ["All", "Frontend", "Backend", "Database", "AI & Automation", "DevOps"];
 
 const skills = [
@@ -62,7 +64,14 @@ const SkillsSection = () => {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
-            Technical Arsenal
+            <Typewriter
+              words={[
+                "Technical Arsenal & Tooling",
+                "Full-Stack & AI Stack"
+              ]}
+              typingSpeed={60}
+              pauseTime={2500}
+            />
           </h2>
         </div>
 

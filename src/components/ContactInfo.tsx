@@ -23,10 +23,10 @@ const ContactInfo = () => {
     >
       <div>
         <h3 className="text-xl font-bold text-zinc-100 mb-2">
-          Direct Communication & Availability
+          Direct Contact & Quick Response
         </h3>
         <p className="text-sm text-zinc-400 leading-relaxed mb-6">
-          Whether you need a SaaS architecture built from scratch, a sales CRM system, AI workflows integrated, or full-stack engineering — I'm open to freelance contracts and engineering roles.
+          Have a project in mind, an idea you want to discuss, or an engineering role open? Reach out directly via form, email, or WhatsApp chat — I am happy to help!
         </p>
 
         {/* Quick Email Copy Box */}

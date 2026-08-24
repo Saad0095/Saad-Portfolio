@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight, FaBuilding } from "react-icons/fa";
 
+import { Typewriter } from "./ui/typewriter";
+
 const testimonials = [
   {
     name: "Ali Hasan Rajani",
@@ -62,7 +64,14 @@ const Testimonials = () => {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
-            Trusted by Founders & Business Leaders
+            <Typewriter
+              words={[
+                "Trusted by Founders & Business Leaders",
+                "Client Feedback & Recommendations"
+              ]}
+              typingSpeed={60}
+              pauseTime={2500}
+            />
           </h2>
           <p className="text-sm text-zinc-400 max-w-lg mt-2">
             Real feedback from founders, CEOs, and teams I've built software products for.

@@ -6,6 +6,8 @@ import crmImg from "@/assets/Cleanmeets CRM (1).jpg";
 import schoolSyncImg from "@/assets/SchoolSync.jpeg";
 import meetsnexImg from "@/assets/meetsnex (1).jpg";
 
+import { Typewriter } from "@/components/ui/typewriter";
+
 export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
   return (
     <section className="min-h-screen overflow-hidden relative pt-24 pb-16 bg-[#09090b] text-zinc-100 flex flex-col justify-center select-none">
@@ -21,9 +23,18 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex justify-center mb-6"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5">
-            <Sparkles className="size-3.5 text-emerald-400 animate-pulse" />
-            <span>WEBSITES • WEB APPS • AI SOFTWARE</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5 min-h-[32px]">
+            <Sparkles className="size-3.5 text-emerald-400 animate-pulse shrink-0" />
+            <Typewriter
+              words={[
+                "WEBSITES • WEB APPS • AI SOFTWARE",
+                "HIGH-CONVERTING LANDING PAGES",
+                "E-COMMERCE & CUSTOM CRMs",
+                "GENERATIVE AI & AGENTIC LLMs"
+              ]}
+              typingSpeed={70}
+              pauseTime={2000}
+            />
           </div>
         </motion.div>
 

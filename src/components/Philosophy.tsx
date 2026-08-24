@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDraftingCompass, FaShieldAlt, FaBrain, FaRocket } from "react-icons/fa";
+import { Typewriter } from "./ui/typewriter";
 
 const principles = [
   {
@@ -48,7 +49,14 @@ const Philosophy = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight"
           >
-            Development Philosophy & Standards
+            <Typewriter
+              words={[
+                "Development Philosophy & Standards",
+                "Engineering Mindset & Practices"
+              ]}
+              typingSpeed={60}
+              pauseTime={2500}
+            />
           </motion.h2>
 
           <motion.p

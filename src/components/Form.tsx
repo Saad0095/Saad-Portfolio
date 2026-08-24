@@ -95,7 +95,7 @@ const Form = () => {
             type="text"
             name="name"
             value={form.name}
-            placeholder="John Doe"
+            placeholder="e.g. Alex Morgan"
             className="w-full p-3 rounded-lg bg-[#09090b] border border-zinc-800 text-zinc-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all placeholder:text-zinc-600"
             onChange={handleChange}
             required
@@ -108,7 +108,7 @@ const Form = () => {
             type="email"
             name="email"
             value={form.email}
-            placeholder="john@company.com"
+            placeholder="e.g. alex@company.com"
             className="w-full p-3 rounded-lg bg-[#09090b] border border-zinc-800 text-zinc-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all placeholder:text-zinc-600"
             onChange={handleChange}
             required
@@ -118,7 +118,7 @@ const Form = () => {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="w-full sm:w-1/2">
-          <label className="block text-xs font-mono text-zinc-400 mb-1.5">PHONE NUMBER (OPTIONAL)</label>
+          <label className="block text-xs font-mono text-zinc-400 mb-1.5">PHONE / WHATSAPP (OPTIONAL)</label>
           <input
             type="text"
             name="phone"
@@ -130,7 +130,7 @@ const Form = () => {
         </div>
 
         <div className="w-full sm:w-1/2">
-          <label className="block text-xs font-mono text-zinc-400 mb-1.5">PROJECT / SERVICE TYPE *</label>
+          <label className="block text-xs font-mono text-zinc-400 mb-1.5">WHAT ARE YOU LOOKING TO BUILD? *</label>
           <select
             name="serviceType"
             value={form.serviceType}
@@ -149,11 +149,11 @@ const Form = () => {
       </div>
 
       <div>
-        <label className="block text-xs font-mono text-zinc-400 mb-1.5">PROJECT DETAILS & SCOPE *</label>
+        <label className="block text-xs font-mono text-zinc-400 mb-1.5">HOW CAN I HELP? (PROJECT DETAILS) *</label>
         <textarea
           name="message"
           value={form.message}
-          placeholder="Briefly describe your project requirements, target users, or key features..."
+          placeholder="Tell me a bit about what you want to build, key features, or any timelines you have in mind..."
           rows={4}
           className="w-full p-3 rounded-lg bg-[#09090b] border border-zinc-800 text-zinc-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all resize-none placeholder:text-zinc-600"
           onChange={handleChange}
