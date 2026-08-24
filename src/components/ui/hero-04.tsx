@@ -23,8 +23,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5">
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse" />
-            {/* <span>FULL-STACK & AI DEVELOPER • WEBSITES • WEB APPS • GEN-AI & LLMs</span> */}
-            <span>FULL-STACK AI DEVELOPER</span>
+            <span>WEBSITES • WEB APPS • AI SOFTWARE</span>
           </div>
         </motion.div>
 
@@ -82,7 +81,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
                   className="h-44 w-36 object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="text-left p-2.5 rotate-180 [writing-mode:vertical-rl] text-[10px] font-mono font-medium tracking-widest text-emerald-400 uppercase">
-                  FULL-STACK ENGINEER
+                  SOFTWARE ENGINEER
                 </div>
               </div>
             </div>
@@ -111,7 +110,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
               className="h-48 w-full object-cover object-center"
             />
             <div className="text-left p-2.5 rotate-180 [writing-mode:vertical-rl] text-[10px] font-mono font-medium tracking-widest text-emerald-400 uppercase">
-              FULL-STACK ENGINEER
+              SOFTWARE ENGINEER
             </div>
           </div>
         </div>
