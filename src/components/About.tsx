@@ -43,8 +43,8 @@ const About = () => {
                   className="w-full h-80 object-cover object-center rounded-xl"
                 />
                 <div className="mt-3 p-3 bg-[#18181b] rounded-lg border border-zinc-800 flex items-center justify-between text-xs font-mono">
-                  <span className="text-zinc-400">LOCATION</span>
-                  <span className="text-emerald-400 font-semibold">Karachi, Pakistan (PKT)</span>
+                  <span className="text-zinc-400">STATUS</span>
+                  <span className="text-emerald-400 font-semibold">Available for Work</span>
                 </div>
               </div>
             </motion.div>

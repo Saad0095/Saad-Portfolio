@@ -13,7 +13,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-emerald-500/10 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative z-20 px-6 w-full">
-        
+
         {/* Top Eyebrow Badge */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -23,7 +23,8 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5">
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse" />
-            <span>FULL-STACK & AI DEVELOPER • WEBSITES • WEB APPS • GEN-AI & LLMs</span>
+            {/* <span>FULL-STACK & AI DEVELOPER • WEBSITES • WEB APPS • GEN-AI & LLMs</span> */}
+            <span>FULL-STACK AI DEVELOPER</span>
           </div>
         </motion.div>
 
@@ -33,11 +34,11 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             initial={{ opacity: 0, y: 30 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="z-20 text-zinc-100 relative font-extrabold tracking-[-3px] md:tracking-[-8px] xl:tracking-[-12px] text-5xl md:text-8xl xl:text-[9rem] uppercase leading-none"
+            className="z-20 text-zinc-100 relative font-extrabold tracking-tight sm:tracking-[-5px] md:tracking-[-8px] xl:tracking-[-12px] text-3xl sm:text-6xl md:text-8xl xl:text-[9rem] uppercase leading-none break-words"
           >
             FULL-STACK DEVELOPER
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
@@ -73,7 +74,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
                 <div className="text-zinc-300">/ E-COMMERCE & WEB APPS</div>
                 <div className="text-zinc-400">/ CUSTOM CRMs & SOFTWARE</div>
               </div>
-              
+
               <div className="hidden md:flex left-1/2 -top-10 w-fit overflow-hidden bg-[#18181c] rounded-xl border border-zinc-800 shadow-xl group-hover:scale-105 transition-transform duration-500">
                 <img
                   src={DevImg}

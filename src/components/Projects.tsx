@@ -61,8 +61,8 @@ const Projects = () => {
               {/* Left Column: Narrative & Technical Specs */}
               <div className="lg:col-span-7 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-3xl font-extrabold text-emerald-400">01</span>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+                    <span className="font-mono text-2xl sm:text-3xl font-extrabold text-emerald-400">01</span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-xs font-semibold uppercase">
                       Sales CRM / Business SaaS
                     </span>
@@ -186,8 +186,8 @@ const Projects = () => {
               {/* Right Column: Narrative & AI Highlights */}
               <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-3xl font-extrabold text-emerald-400">02</span>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+                    <span className="font-mono text-2xl sm:text-3xl font-extrabold text-emerald-400">02</span>
                     <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-xs font-semibold uppercase">
                       AI-Powered School Management SaaS
                     </span>
