@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub, FaCheckCircle, FaUsers, FaDatabase, FaShieldAlt, FaChartLine } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaCheckCircle } from "react-icons/fa";
 
 import crmImg from "../assets/Cleanmeets CRM (1).jpg";
 import schoolSyncImg from "../assets/SchoolSync.jpeg";
@@ -78,35 +78,19 @@ const Projects = () => {
                   <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6 font-medium">
                     A complete CRM built around real sales and lead-management workflows. Engineered with granular role-based permissions, live call agent routing, and real-time updates for multi-region teams.
                   </p>
-
-                  {/* Highlighted Architecture Features */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
-                      <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaShieldAlt /> Multi-Role Access (RBAC)
-                      </div>
-                      <p className="text-xs text-zinc-400">Admin, Manager, Caller-Agent, and Closer-Agent role hierarchies with distinct permission boundaries.</p>
+                  {/* Key Capabilities */}
+                  <div className="space-y-2.5 mb-6 text-xs sm:text-sm text-zinc-300">
+                    <div className="flex items-start gap-2.5">
+                      <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
+                      <span><strong>Multi-Role Access (RBAC):</strong> Admin, Manager, Caller-Agent, and Closer-Agent role hierarchies with distinct permission boundaries.</span>
                     </div>
-
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
-                      <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaDatabase /> Lead Pipeline & CSV Import
-                      </div>
-                      <p className="text-xs text-zinc-400">Automated lead assignment, CSV bulk data import, status tracking, and call history logging.</p>
+                    <div className="flex items-start gap-2.5">
+                      <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
+                      <span><strong>Lead Pipeline & Routing:</strong> Automated lead assignment, CSV bulk data import, status tracking, and call history logging.</span>
                     </div>
-
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
-                      <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaUsers /> Socket.IO Workflows
-                      </div>
-                      <p className="text-xs text-zinc-400">Real-time caller/closer agent notifications, lead handoffs, and operational status sync.</p>
-                    </div>
-
-                    <div className="bg-[#18181b] border border-zinc-800/90 rounded-xl p-3.5">
-                      <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs mb-1">
-                        <FaChartLine /> Executive Dashboards & REST
-                      </div>
-                      <p className="text-xs text-zinc-400">Interactive manager analytics, conversion metrics, performance reports, and secure JWT APIs.</p>
+                    <div className="flex items-start gap-2.5">
+                      <FaCheckCircle className="text-emerald-400 mt-1 shrink-0" />
+                      <span><strong>Socket.IO Workflows & REST:</strong> Real-time agent notifications, live status sync, executive dashboards, and JWT auth.</span>
                     </div>
                   </div>
                 </div>
@@ -302,12 +286,12 @@ const Projects = () => {
                 </h3>
 
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
-                  High-converting digital business showcase built with smooth interaction design, responsive layouts, fast load speeds, and clean component architecture.
+                  Modern responsive business website with polished interactions and conversion-focused UX.
                 </p>
 
                 <div className="space-y-2 text-xs text-zinc-400 mb-6">
                   <div className="flex items-center gap-2">
-                    <FaCheckCircle className="text-emerald-400" /> High-converting visual layout & call-to-actions
+                    <FaCheckCircle className="text-emerald-400" /> Modern visual hierarchy, responsive layouts & strong CTAs
                   </div>
                   <div className="flex items-center gap-2">
                     <FaCheckCircle className="text-emerald-400" /> Framer Motion animations & fluid micro-interactions
