@@ -27,10 +27,10 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse shrink-0" />
             <Typewriter
               words={[
-                "WEBSITES • WEB APPS • AI SOFTWARE",
+                "WEBSITES • WEB APPS • CUSTOM SOFTWARE",
                 "HIGH-CONVERTING LANDING PAGES",
                 "E-COMMERCE & CUSTOM CRMs",
-                "GENERATIVE AI & AGENTIC LLMs"
+                "FULL-STACK WEB DEVELOPMENT"
               ]}
               typingSpeed={70}
               pauseTime={2000}
@@ -104,11 +104,11 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
               </span>
               <span className="text-zinc-600">•</span>
               <span className="flex items-center gap-1 text-emerald-400 font-semibold">
-                <CheckCircle2 className="size-3 text-emerald-400" /> Generative AI & Agentic LLMs
+                <CheckCircle2 className="size-3 text-emerald-400" /> Node.js & MongoDB
               </span>
               <span className="text-zinc-600">•</span>
               <span className="flex items-center gap-1 text-emerald-400 font-semibold">
-                <CheckCircle2 className="size-3 text-emerald-400" /> Node.js & MongoDB
+                <CheckCircle2 className="size-3 text-emerald-400" /> REST APIs & Smart Integrations
               </span>
             </div>
           </motion.div>

@@ -23,11 +23,10 @@ const skills = [
 
   { name: "MongoDB", category: "Database", icon: <SiMongodb className="text-emerald-500" /> },
 
-  { name: "Generative AI", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
-  { name: "LLM Integrations", category: "AI & Automation", icon: <FaRobot className="text-teal-400" /> },
-  { name: "Agentic Workflows", category: "AI & Automation", icon: <FaRobot className="text-cyan-400" /> },
-  { name: "Prompt Engineering", category: "AI & Automation", icon: <FaRobot className="text-emerald-300" /> },
+  { name: "AI Integrations", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
+  { name: "LLM Workflows", category: "AI & Automation", icon: <FaRobot className="text-teal-400" /> },
   { name: "OpenAI API", category: "AI & Automation", icon: <FaRobot className="text-emerald-400" /> },
+  { name: "Groq API", category: "AI & Automation", icon: <FaRobot className="text-cyan-400" /> },
   { name: "Automation Bots", category: "AI & Automation", icon: <FaRobot className="text-teal-400" /> },
   { name: "Puppeteer", category: "AI & Automation", icon: <SiPuppeteer className="text-emerald-300" /> },
 
@@ -67,7 +66,7 @@ const SkillsSection = () => {
             <Typewriter
               words={[
                 "Technical Arsenal & Tooling",
-                "Full-Stack & AI Stack"
+                "Full-Stack Development Stack"
               ]}
               typingSpeed={60}
               pauseTime={2500}

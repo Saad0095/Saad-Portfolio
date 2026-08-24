@@ -29,6 +29,7 @@ const Footer = () => {
           <a href="#capabilities" className="hover:text-emerald-400 transition-colors">Capabilities</a>
           <a href="#skills" className="hover:text-emerald-400 transition-colors">Tech Stack</a>
           <a href="#philosophy" className="hover:text-emerald-400 transition-colors">Philosophy</a>
+          <a href="#faq" className="hover:text-emerald-400 transition-colors">FAQ</a>
           <a href="#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
         </div>
 
@@ -54,7 +55,7 @@ const Footer = () => {
               <FaLinkedin size={16} />
             </a>
             <a
-              href="https://wa.me/923170218290"
+              href="https://wa.me/923218797825"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp Contact"

@@ -61,7 +61,7 @@ const ContactInfo = () => {
         {/* Action Touchpoints */}
         <div className="space-y-3">
           <a
-            href="https://wa.me/923170218290"
+            href="https://wa.me/923218797825"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-4 rounded-xl bg-[#121215] border border-zinc-800 hover:border-emerald-500/40 hover:bg-[#18181c] transition-all group"
@@ -72,14 +72,14 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h4 className="text-sm font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">WhatsApp Chat</h4>
-                <p className="text-xs text-zinc-400">+92 317 0218290</p>
+                <p className="text-xs text-zinc-400">+92 321 8797825</p>
               </div>
             </div>
             <span className="text-xs font-mono text-emerald-400 font-semibold">Direct Message &rarr;</span>
           </a>
 
           <a
-            href="tel:+923170218290"
+            href="tel:+923218797825"
             className="flex items-center justify-between p-4 rounded-xl bg-[#121215] border border-zinc-800 hover:border-emerald-500/40 hover:bg-[#18181c] transition-all group"
           >
             <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h4 className="text-sm font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Phone Contact</h4>
-                <p className="text-xs text-zinc-400">+92 317 0218290</p>
+                <p className="text-xs text-zinc-400">+92 321 8797825</p>
               </div>
             </div>
             <span className="text-xs font-mono text-emerald-400 font-semibold">Call &rarr;</span>

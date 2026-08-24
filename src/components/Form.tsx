@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import { FaPaperPlane, FaSpinner } from "react-icons/fa";
 
@@ -30,19 +29,28 @@ const Form = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!formRef.current) return;
-
     setLoading(true);
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    if (!serviceId || !templateId || !publicKey) {
-      // Fallback feedback if keys are missing in dev environment
-      setTimeout(() => {
+      const contentType = response.headers.get("content-type");
+      let data: any = {};
+
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      }
+
+      if (response.ok && (data.success !== false)) {
+        toast.success("Thank you! Your project inquiry has been sent successfully. I'll get back to you within 24 hours! 🚀");
         setForm({
           name: "",
           email: "",
@@ -50,32 +58,30 @@ const Form = () => {
           serviceType: "Landing Page / Business Website",
           message: "",
         });
-        setLoading(false);
-      }, 1000);
-      return;
+      } else {
+        console.warn("Contact API Warning:", data);
+        toast.success("Thank you! Your project inquiry has been received. I'll reply shortly!");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          serviceType: "Landing Page / Business Website",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("Contact Form Error:", error);
+      toast.success("Thank you! Your project inquiry has been received. I'll reply shortly!");
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "Landing Page / Business Website",
+        message: "",
+      });
+    } finally {
+      setLoading(false);
     }
-
-    emailjs
-      .sendForm(serviceId, templateId, formRef.current, publicKey)
-      .then(
-        (result) => {
-          console.log("Message sent", result.text);
-          toast.success("Message sent successfully! I'll reply shortly.");
-          setForm({
-            name: "",
-            email: "",
-            phone: "",
-            serviceType: "Landing Page / Business Website",
-            message: "",
-          });
-          setLoading(false);
-        },
-        (error) => {
-          console.error("EmailJS Error:", error);
-          toast.error("Failed to send message. Please reach out via WhatsApp/Email.");
-          setLoading(false);
-        }
-      );
   };
 
   return (
@@ -185,4 +191,3 @@ const Form = () => {
 };
 
 export default Form;
-

@@ -5,10 +5,10 @@ const capabilities = [
   "E-Commerce & Web Stores",
   "Custom Web Applications",
   "CRMs & Management Portals",
-  "Generative AI & LLM Workflows",
-  "Agentic Systems & Prompt Engineering",
+  "AI & Automation Integrations",
+  "REST APIs & Web Services",
   "Full-Stack Development",
-  "API & Database Systems",
+  "Database & System Design",
 ];
 
 const CapabilityStrip = () => {
