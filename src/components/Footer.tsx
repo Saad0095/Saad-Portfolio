@@ -11,11 +11,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#09090b] border-t border-[#27272a] py-12 px-4 sm:px-6 lg:px-12 text-zinc-400">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        
+
         {/* Brand & Copy */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <a href="#" className="font-mono text-base font-bold text-zinc-100">
-            saad<span className="text-emerald-400">.dev</span>
+            Saad<span className="text-emerald-400">.dev</span>
           </a>
           <p className="text-xs text-zinc-400">
             Full-Stack Developer • SaaS, CRM, ERP & AI Applications

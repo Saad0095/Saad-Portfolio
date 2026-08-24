@@ -21,7 +21,7 @@ function App() {
       <CustomCursor />
       <Navbar />
       <main>
-        <Hero />
+        <Hero isReady={!isLoading} />
         <CapabilityStrip />
         <About />
         <Projects />

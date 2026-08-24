@@ -6,7 +6,7 @@ import crmImg from "@/assets/Cleanmeets CRM (1).jpg";
 import schoolSyncImg from "@/assets/SchoolSync.jpeg";
 import meetsnexImg from "@/assets/meetsnex (1).jpg";
 
-export function HeroSection04() {
+export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
   return (
     <section className="min-h-screen overflow-hidden relative pt-24 pb-16 bg-[#09090b] text-zinc-100 flex flex-col justify-center select-none">
       {/* Background Radial Light Glow */}
@@ -17,8 +17,8 @@ export function HeroSection04() {
         {/* Top Eyebrow Badge */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="flex justify-center mb-6"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-emerald-500/5">
@@ -30,9 +30,9 @@ export function HeroSection04() {
         {/* Large Editorial Headline Header */}
         <div className="relative text-center">
           <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
             className="z-20 text-zinc-100 relative font-extrabold tracking-[-3px] md:tracking-[-8px] xl:tracking-[-12px] text-5xl md:text-8xl xl:text-[9rem] uppercase leading-none"
           >
             FULL-STACK DEVELOPER
@@ -40,16 +40,16 @@ export function HeroSection04() {
           
           <motion.p
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-3xl hidden sm:block absolute -bottom-8 right-8 md:right-24 font-light tracking-[4px] font-mono text-emerald-400"
           >
             SAAD BIN KHALID
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl sm:hidden absolute -bottom-8 left-6 font-light tracking-[4px] font-mono text-emerald-400"
           >
             SAAD BIN KHALID
@@ -59,9 +59,9 @@ export function HeroSection04() {
         {/* Center Grid Showcase */}
         <div className="grid relative mt-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={{ opacity: 0, y: 35 }}
+            animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
             className="space-y-8 pt-6 flex flex-col items-center"
           >
             <div className="flex flex-col md:flex-row gap-6 bg-[#121215] border border-zinc-800 rounded-2xl w-full max-w-2xl h-fit p-8 md:p-10 items-start md:items-end justify-between shadow-2xl hover:border-emerald-500/40 transition-all duration-500 group">
@@ -118,8 +118,8 @@ export function HeroSection04() {
         {/* Subtitle Statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
           className="md:mt-16 mt-10"
         >
           <p className="mx-auto max-w-2xl font-sans text-center text-zinc-300 text-sm md:text-base leading-relaxed uppercase tracking-wide">
@@ -130,8 +130,8 @@ export function HeroSection04() {
         {/* CTA Actions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
         >
           <Button size="lg" asChild className="hover:scale-105 transition-transform shadow-xl shadow-emerald-500/20">
@@ -148,9 +148,9 @@ export function HeroSection04() {
 
         {/* Recent Work Footer Cards */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
+          initial={{ opacity: 0, y: 35 }}
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
+          transition={{ duration: 0.7, delay: 0.65 }}
           className="md:flex mt-16 items-end justify-between gap-8"
         >
           <div className="relative group">

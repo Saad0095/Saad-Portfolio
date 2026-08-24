@@ -46,7 +46,7 @@ const Navbar = () => {
 
       {/* Floating Pill Nav */}
       <div className="pointer-events-auto w-full max-w-4xl bg-[#09090b]/80 backdrop-blur-xl border border-zinc-800/90 rounded-full px-4 sm:px-6 py-2.5 shadow-2xl shadow-black/80 flex items-center justify-between transition-all">
-        
+
         {/* Brand Logo */}
         <a
           href="#"
@@ -54,7 +54,7 @@ const Navbar = () => {
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block"></span>
           <span>
-            saad<span className="text-emerald-400">.dev</span>
+            Saad<span className="text-emerald-400">.dev</span>
           </span>
         </a>
 
@@ -66,9 +66,8 @@ const Navbar = () => {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className={`relative px-3.5 py-1.5 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
-                    isActive ? "text-zinc-100 font-semibold" : "hover:text-zinc-200"
-                  }`}
+                  className={`relative px-3.5 py-1.5 rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${isActive ? "text-zinc-100 font-semibold" : "hover:text-zinc-200"
+                    }`}
                 >
                   {isActive && (
                     <motion.span
