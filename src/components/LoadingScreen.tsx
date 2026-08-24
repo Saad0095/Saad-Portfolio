@@ -6,11 +6,10 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const steps = [
-    "INITIALIZING SAAD.DEV ENGINE...",
-    "LOADING FULL-STACK ARCHITECTURE...",
-    "AUTHENTICATING RBAC SECURITY...",
-    "COMPOSING PRODUCT PIPELINES...",
-    "SYSTEM READY."
+    "LOADING PORTFOLIO...",
+    "PREPARING PROJECTS & WORK...",
+    "OPTIMIZING DESIGN & PERFORMANCE...",
+    "WELCOME TO SAAD.DEV"
   ];
 
   useEffect(() => {
@@ -83,8 +82,8 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
           {/* Subtext */}
           <div className="pt-2 text-[10px] text-zinc-400 text-center flex justify-between font-mono">
-            <span>SAAS & FULL-STACK ENGINEER</span>
-            <span className="text-emerald-400 font-bold">120 FPS ENGINE</span>
+            <span>FULL-STACK DEVELOPER</span>
+            <span className="text-emerald-400 font-bold">SAAD BIN KHALID</span>
           </div>
 
         </div>

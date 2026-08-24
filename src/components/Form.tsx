@@ -17,7 +17,7 @@ const Form = () => {
     name: "",
     email: "",
     phone: "",
-    serviceType: "Full-Stack SaaS / CRM Application",
+    serviceType: "Landing Page / Business Website",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -43,12 +43,11 @@ const Form = () => {
     if (!serviceId || !templateId || !publicKey) {
       // Fallback feedback if keys are missing in dev environment
       setTimeout(() => {
-        toast.info("Thank you! Form demo submitted successfully.");
         setForm({
           name: "",
           email: "",
           phone: "",
-          serviceType: "Full-Stack SaaS / CRM Application",
+          serviceType: "Landing Page / Business Website",
           message: "",
         });
         setLoading(false);
@@ -66,7 +65,7 @@ const Form = () => {
             name: "",
             email: "",
             phone: "",
-            serviceType: "Full-Stack SaaS / CRM Application",
+            serviceType: "Landing Page / Business Website",
             message: "",
           });
           setLoading(false);
@@ -139,12 +138,12 @@ const Form = () => {
             onChange={handleChange}
             required
           >
-            <option value="Full-Stack SaaS / CRM Application">Full-Stack SaaS / CRM Application</option>
-            <option value="AI Integration & Automation">AI Integration & Automation Workflow</option>
-            <option value="REST API & Backend Development">REST API & Backend Architecture</option>
-            <option value="High-Converting Web App / Frontend">High-Converting Web App / Frontend</option>
-            <option value="Scraping & Lead Generation System">Scraping & Lead Generation System</option>
-            <option value="Full-Stack Contract / Role">Full-Stack Contract / Role</option>
+            <option value="Landing Page / Business Website">Landing Page / Business Website</option>
+            <option value="E-Commerce / Web Store">E-Commerce / Web Store</option>
+            <option value="Custom Web Application">Custom Web Application</option>
+            <option value="Sales CRM / Management Portal">Sales CRM / Management Portal</option>
+            <option value="AI Integration & Automation">AI Integration & Automation</option>
+            <option value="Full-Stack Engineering / Contract Role">Full-Stack Engineering / Contract Role</option>
           </select>
         </div>
       </div>

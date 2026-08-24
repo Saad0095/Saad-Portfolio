@@ -23,7 +23,7 @@ export function HeroSection04() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse" />
-            <span>FULL-STACK DEVELOPER • SAAS & AI ENGINEER</span>
+            <span>FULL-STACK DEVELOPER • WEBSITES • WEB APPS • SAAS</span>
           </div>
         </motion.div>
 
@@ -33,9 +33,9 @@ export function HeroSection04() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="z-20 text-zinc-100 relative font-extrabold tracking-[-4px] md:tracking-[-10px] xl:tracking-[-14px] text-5xl md:text-8xl xl:text-[9.5rem] uppercase leading-none"
+            className="z-20 text-zinc-100 relative font-extrabold tracking-[-3px] md:tracking-[-8px] xl:tracking-[-12px] text-5xl md:text-8xl xl:text-[9rem] uppercase leading-none"
           >
-            FULL-STACK SAAS
+            FULL-STACK DEVELOPER
           </motion.h1>
           
           <motion.p
@@ -68,10 +68,10 @@ export function HeroSection04() {
               <div className="font-mono text-base md:text-xl space-y-2.5 text-zinc-200">
                 <div className="text-emerald-400 font-bold flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-ping" />
-                  / SAAS & CRM ARCHITECTURE
+                  / WEBSITES & LANDING PAGES
                 </div>
-                <div className="text-zinc-300">/ AI-POWERED WORKFLOWS</div>
-                <div className="text-zinc-400">/ REST APIs & WEBSOCKETS</div>
+                <div className="text-zinc-300">/ E-COMMERCE & WEB APPS</div>
+                <div className="text-zinc-400">/ CUSTOM CRMs & SOFTWARE</div>
               </div>
               
               <div className="hidden md:flex left-1/2 -top-10 w-fit overflow-hidden bg-[#18181c] rounded-xl border border-zinc-800 shadow-xl group-hover:scale-105 transition-transform duration-500">
@@ -108,7 +108,7 @@ export function HeroSection04() {
           className="md:mt-20 mt-10"
         >
           <p className="mx-auto max-w-2xl font-sans text-center text-zinc-300 text-sm md:text-base leading-relaxed">
-            I BUILD PRODUCTION-READY SAAS PLATFORMS, BUSINESS CRMs, AND PRACTICAL AI WORKFLOWS THAT SOLVE REAL OPERATIONAL PROBLEMS.
+            FROM HIGH-CONVERTING LANDING PAGES AND BUSINESS WEBSITES TO CUSTOM WEB APPLICATIONS AND CRMs — I BUILD FAST, MODERN, AND RELIABLE DIGITAL PRODUCTS tailored TO YOUR GOALS.
           </p>
         </motion.div>
 

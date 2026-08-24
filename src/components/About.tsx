@@ -69,7 +69,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight leading-tight mb-6"
             >
-              Building end-to-end software products with focus on usability and architecture.
+              Building modern websites, web applications, and custom software tailored to your business.
             </motion.h2>
 
             <motion.p
@@ -77,9 +77,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-zinc-300 leading-relaxed text-base mb-6"
+              className="text-zinc-300 leading-relaxed text-base sm:text-lg mb-8"
             >
-              I am a Computer Science student and Full-Stack Developer who specializes in crafting production-ready software solutions. Rather than building static mockups, I focus on engineering complete applications — handling frontend interfaces, REST API architecture, database schemas, multi-role security, real-time messaging, and practical AI integrations.
+              I am a Full-Stack Developer and Computer Science student who creates clean, modern, and reliable web products. Whether you need a high-converting business landing page, an e-commerce platform, a custom CRM, or an AI-powered web application — I focus on responsive design, fast performance, and real business value.
             </motion.p>
 
             <motion.p

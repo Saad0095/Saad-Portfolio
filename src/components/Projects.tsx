@@ -30,9 +30,9 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl font-extrabold text-zinc-100 tracking-tight"
           >
-            SaaS Applications & Engineering Systems
+            Websites, Web Apps & Software Projects
           </motion.h2>
-
+          
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-base sm:text-lg text-zinc-400 max-w-2xl mt-3"
           >
-            Complete software products built for real operational workflows — featuring multi-role access control, AI integrations, data pipelines, and APIs.
+            From modern business landing pages to AI school SaaS platforms, multi-role sales CRMs, and lead automation tools — here is real software built for clients and companies.
           </motion.p>
         </div>
 

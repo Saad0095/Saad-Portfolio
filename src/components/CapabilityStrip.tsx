@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 
 const capabilities = [
-  "SaaS Architecture",
-  "CRM / ERP Systems",
-  "AI Integrations & LLMs",
-  "REST APIs & WebSockets",
-  "Real-Time Data Streams",
-  "Lead Automation & Scraping",
-  "Full-Stack Engineering",
-  "Role-Based Security (RBAC)",
+  "Websites & Landing Pages",
+  "E-Commerce & Web Stores",
+  "Custom Web Applications",
+  "CRMs & Management Portals",
+  "Full-Stack Development",
+  "AI & Automation Tools",
+  "API & Database Systems",
 ];
 
 const CapabilityStrip = () => {
