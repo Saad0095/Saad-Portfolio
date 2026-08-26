@@ -79,7 +79,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-zinc-300 leading-relaxed text-base sm:text-lg mb-8"
             >
-              I am a Full-Stack Developer and Computer Science student based in Karachi, Pakistan. I specialize in creating clean, fast, and reliable web products — from high-converting landing pages and online stores to multi-role CRMs, SaaS management portals, and automated web applications that deliver real value to your business.
+              I am a Full-Stack Developer and Computer Science student. I specialize in creating clean, fast, and reliable web products — from high-converting landing pages and online stores to multi-role CRMs, SaaS management portals, and automated web applications that deliver real value to your business.
             </motion.p>
 
             <motion.p
