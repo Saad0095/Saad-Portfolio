@@ -16,7 +16,7 @@ const Form = () => {
     name: "",
     email: "",
     phone: "",
-    serviceType: "Landing Page / Business Website",
+    serviceType: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -55,7 +55,7 @@ const Form = () => {
           name: "",
           email: "",
           phone: "",
-          serviceType: "Landing Page / Business Website",
+          serviceType: "",
           message: "",
         });
       } else {
@@ -65,7 +65,7 @@ const Form = () => {
           name: "",
           email: "",
           phone: "",
-          serviceType: "Landing Page / Business Website",
+          serviceType: "",
           message: "",
         });
       }
@@ -76,7 +76,7 @@ const Form = () => {
         name: "",
         email: "",
         phone: "",
-        serviceType: "Landing Page / Business Website",
+        serviceType: "",
         message: "",
       });
     } finally {
@@ -124,7 +124,7 @@ const Form = () => {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="w-full sm:w-1/2">
-          <label className="block text-xs font-mono text-zinc-400 mb-1.5">PHONE / WHATSAPP (OPTIONAL)</label>
+          <label className="block text-xs font-mono text-zinc-400 mb-1.5">PHONE / WHATSAPP</label>
           <input
             type="text"
             name="phone"
@@ -150,6 +150,7 @@ const Form = () => {
             <option value="Sales CRM / Management Portal">Sales CRM / Management Portal</option>
             <option value="AI Integration & Automation">AI Integration & Automation</option>
             <option value="Full-Stack Engineering / Contract Role">Full-Stack Engineering / Contract Role</option>
+            <option value="Other">Other</option>
           </select>
         </div>
       </div>
