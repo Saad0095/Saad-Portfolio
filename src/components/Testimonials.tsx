@@ -17,7 +17,7 @@ const testimonials = [
     company: "MeetsNex",
     role: "Founder",
     feedback:
-      "I worked with Saad, and the experience has been great so far. They helped us successfully complete our website project and were professional, responsive, and easy to work with throughout the process. I really appreciate their support and would definitely recommend them to anyone looking for reliable web development or kinda digital services.",
+      "I worked with Saad, and the experience has been great so far. He helped us successfully complete our website project and was professional, responsive, and easy to work with throughout the process. I really appreciate his support and would definitely recommend him to anyone looking for reliable web development or digital services.",
   },
   {
     name: "Hamza",
