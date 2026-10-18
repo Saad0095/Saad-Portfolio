@@ -1,37 +1,41 @@
 import { motion } from "framer-motion";
-import { FaDraftingCompass, FaShieldAlt, FaBrain, FaRocket } from "react-icons/fa";
+import { FaLightbulb, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 import { Typewriter } from "./ui/typewriter";
+import Timeline2, { type TimelineStep } from "@/components/ui/8bit-timeline2";
 
-const principles = [
+const workflowSteps: TimelineStep[] = [
   {
-    icon: FaDraftingCompass,
-    title: "01. Product-First Engineering",
-    desc: "I don't just write code — I build complete products around real business workflows. Every feature is designed with clear user roles, operational efficiency, and data integrity in mind."
+    icon: <FaLightbulb className="size-5 text-emerald-400" />,
+    title: "01. Scope & Discover",
+    description: "Deep-dive into business objectives, user workflows, user roles, and core technical requirements.",
   },
   {
-    icon: FaShieldAlt,
-    title: "02. Scalable Architecture & RBAC",
-    desc: "Security and data boundaries start on day one. I enforce granular Role-Based Access Control (Admin, Manager, Agent, Student), clean REST endpoints, and structured MongoDB schemas."
+    icon: <FaDraftingCompass className="size-5 text-emerald-400" />,
+    title: "02. Architecture & UI",
+    description: "Structuring database schemas, REST API contracts, and intuitive, responsive interface layouts.",
   },
   {
-    icon: FaBrain,
-    title: "03. Practical AI Integration",
-    desc: "AI is best when seamlessly embedded into everyday tasks. I integrate LLM workflows to handle routine heavy-lifting like document drafting, report comments, and smart data extraction."
+    icon: <FaCode className="size-5 text-emerald-400" />,
+    title: "03. Full-Stack Build",
+    description: "Writing clean, type-safe React/Next.js & Node.js code with RBAC security and smart AI integrations.",
   },
   {
-    icon: FaRocket,
-    title: "04. Reliable Shipping & Quality",
-    desc: "From initial UI components to server deployment (Vercel, Linux, Nginx, PM2), I focus on clean TypeScript, responsive layouts, fast page loads, and zero-downtime stability."
-  }
+    icon: <FaRocket className="size-5 text-emerald-400" />,
+    title: "04. Testing & Launch",
+    description: "End-to-end QA, performance audits, zero-downtime cloud deployment, and post-launch monitoring.",
+  },
 ];
 
 const Philosophy = () => {
   return (
-    <section id="philosophy" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b]">
-      <div className="max-w-7xl mx-auto">
+    <section id="philosophy" className="py-24 px-4 sm:px-6 lg:px-12 bg-[#09090b] relative overflow-hidden">
+      {/* Subtle Background Radial Ambient Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-emerald-500/5 blur-[150px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +43,8 @@ const Philosophy = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-semibold uppercase mb-4"
           >
-            <span>ENGINEERING MINDSET</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>ENGINEERING PROCESS & STANDARDS</span>
           </motion.div>
 
           <motion.h2
@@ -51,8 +56,9 @@ const Philosophy = () => {
           >
             <Typewriter
               words={[
-                "Development Philosophy & Standards",
-                "Engineering Mindset & Practices"
+                "From Concept to Production Launch",
+                "How I Engineer Scalable Web Apps",
+                "The Full-Stack Development Process",
               ]}
               typingSpeed={60}
               pauseTime={2500}
@@ -64,36 +70,27 @@ const Philosophy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-sm sm:text-base text-zinc-400 max-w-xl mt-3"
+            className="text-sm sm:text-base text-zinc-400 max-w-xl mt-3 font-normal"
           >
-            How I approach software engineering — balancing technical rigor with product velocity.
+            A structured, transparent development quest designed to ship reliable, high-performing software on schedule.
           </motion.p>
         </div>
 
-        {/* Principles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {principles.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-[#121215] border border-zinc-800 rounded-xl p-6 sm:p-8 hover:border-emerald-500/30 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
-                    <Icon size={18} />
-                  </div>
-                  <h3 className="text-lg font-bold text-zinc-100 mb-3">{item.title}</h3>
-                  <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+        {/* 21st.dev 8-Bit Quest Timeline Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-full"
+        >
+          <Timeline2
+            title=""
+            description=""
+            steps={workflowSteps}
+            className="py-6 px-0"
+          />
+        </motion.div>
 
       </div>
     </section>
@@ -101,3 +98,4 @@ const Philosophy = () => {
 };
 
 export default Philosophy;
+

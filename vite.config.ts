@@ -79,4 +79,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    watch: {
+      ignored: ['**/dist/**', '**/node_modules/**'],
+    },
+  },
 });
