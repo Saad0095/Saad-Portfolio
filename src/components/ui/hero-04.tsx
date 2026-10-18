@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import DevImg from "@/assets/developer_image.jpg";
-import crmImg from "@/assets/Cleanmeets CRM (1).jpg";
-import schoolSyncImg from "@/assets/SchoolSync.jpeg";
-import meetsnexImg from "@/assets/meetsnex (1).jpg";
+// import DevImg from "@/assets/developer_image.jpg";
+// import crmImg from "@/assets/Cleanmeets CRM (1).jpg";
+// import schoolSyncImg from "@/assets/SchoolSync.jpeg";
+// import meetsnexImg from "@/assets/meetsnex (1).jpg";
+// import { ArrowDownRight, CheckCircle2 } from "lucide-react";
 
 import { Typewriter } from "@/components/ui/typewriter";
 
 export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
   return (
-    <section className="min-h-screen overflow-hidden relative pt-24 pb-16 bg-[#09090b] text-zinc-100 flex flex-col justify-center select-none">
+    <section className="min-h-screen overflow-hidden relative pt-24 pb-16 bg-[#09090b] text-zinc-100 flex flex-col justify-center">
       {/* Background Radial Light Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-emerald-500/10 blur-[160px] rounded-full pointer-events-none" />
 
@@ -27,10 +28,10 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             <Sparkles className="size-3.5 text-emerald-400 animate-pulse shrink-0" />
             <Typewriter
               words={[
-                "WEBSITES • WEB APPS • CUSTOM SOFTWARE",
+                "FULL-STACK WEB DEVELOPMENT",
+                "WEB DESIGN • WEB APPS • CUSTOM SOFTWARE",
                 "HIGH-CONVERTING LANDING PAGES",
                 "E-COMMERCE & CUSTOM CRMs",
-                "FULL-STACK WEB DEVELOPMENT"
               ]}
               typingSpeed={70}
               pauseTime={2000}
@@ -44,7 +45,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             initial={{ opacity: 0, y: 30 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="z-20 text-zinc-100 relative font-extrabold tracking-tight sm:tracking-[-5px] md:tracking-[-8px] xl:tracking-[-12px] text-3xl sm:text-6xl md:text-8xl xl:text-[9rem] uppercase leading-none break-words"
+            className="z-20 text-zinc-100 relative font-extrabold tracking-tight sm:tracking-[-5px] md:tracking-[-8px] xl:tracking-[-12px] text-6xl sm:text-6xl md:text-7xl xl:text-[8rem] uppercase leading-none break-words mb-1"
           >
             FULL-STACK DEVELOPER
           </motion.h1>
@@ -58,17 +59,17 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             SAAD BIN KHALID
           </motion.p>
           <motion.p
-            initial={{ opacity: 0, x: 20 }}
-            animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl sm:hidden absolute -bottom-8 left-6 font-light tracking-[4px] font-mono text-emerald-400"
+            className="text-xl sm:text-xl sm:hidden absolute -bottom-8 inset-x-0 mx-auto text-center font-light tracking-[4px] font-mono text-emerald-400"
           >
             SAAD BIN KHALID
           </motion.p>
         </div>
 
         {/* Center Grid Showcase */}
-        <div className="grid relative mt-16">
+        {/* <div className="grid relative mt-16">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
@@ -97,7 +98,6 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
               </div>
             </div>
 
-            {/* Subtle Tech Stack Ticker Pill */}
             <div className="flex flex-wrap items-center justify-center gap-3 text-[11px] font-mono text-zinc-400 pt-2">
               <span className="flex items-center gap-1 text-emerald-400 font-semibold">
                 <CheckCircle2 className="size-3 text-emerald-400" /> React & Next.js
@@ -113,7 +113,6 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
             </div>
           </motion.div>
 
-          {/* Mobile Profile Image */}
           <div className="flex md:hidden mt-6 w-full overflow-hidden bg-[#121215] rounded-xl border border-zinc-800">
             <img
               src={DevImg}
@@ -124,14 +123,14 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
               SOFTWARE ENGINEER
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Subtitle Statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="md:mt-16 mt-10"
+          className="mt-16"
         >
           <p className="mx-auto max-w-2xl font-sans text-center text-zinc-300 text-sm md:text-base leading-relaxed uppercase tracking-wide">
             FROM HIGH-CONVERTING LANDING PAGES AND BUSINESS WEBSITES TO CUSTOM WEB APPLICATIONS AND CRMs — I BUILD FAST, MODERN, AND RELIABLE DIGITAL PRODUCTS TAILORED TO YOUR GOALS.
@@ -158,7 +157,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
         </motion.div>
 
         {/* Recent Work Footer Cards */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 35 }}
           animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
           transition={{ duration: 0.7, delay: 0.65 }}
@@ -202,7 +201,7 @@ export function HeroSection04({ isReady = true }: { isReady?: boolean }) {
               </h2>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
       </div>
 

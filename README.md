@@ -126,7 +126,7 @@ The output will be generated in the `dist/` directory.
 
 - **Portfolio**: [https://saad.devphic.com/](https://saad.devphic.com/)
 - **Email**: [saadbinkhalid1895@gmail.com](mailto:saadbinkhalid1895@gmail.com)
-- **WhatsApp**: [+92 321 8797825](https://wa.me/923218797825)
+- **WhatsApp**: [+92 317 0218290](https://wa.me/923170218290)
 - **LinkedIn**: [Saad Bin Khalid](https://www.linkedin.com/in/saad-bin-khalid-b077b8243/)
 - **GitHub**: [@Saad0095](https://github.com/Saad0095)
 

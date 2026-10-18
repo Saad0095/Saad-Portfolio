@@ -23,9 +23,9 @@ function App() {
       <Navbar />
       <main>
         <Hero isReady={!isLoading} />
-        <CapabilityStrip />
         <About />
         <Projects />
+        <CapabilityStrip />
         <Skills />
         <Philosophy />
         <Testimonials />
