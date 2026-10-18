@@ -17,13 +17,10 @@ const Footer = () => {
           <a href="#" className="font-mono text-base font-bold text-zinc-100">
             Saad<span className="text-emerald-400">.dev</span>
           </a>
-          <p className="text-xs text-zinc-400">
-            Full-Stack Developer • SaaS, CRM, ERP & AI Applications
-          </p>
         </div>
 
         {/* Navigation Quick Links */}
-        <div className="flex flex-wrap justify-center gap-6 text-xs font-medium text-zinc-400">
+        {/* <div className="flex flex-wrap justify-center gap-6 text-xs font-medium text-zinc-400">
           <a href="#about" className="hover:text-emerald-400 transition-colors">About</a>
           <a href="#projects" className="hover:text-emerald-400 transition-colors">Featured Work</a>
           <a href="#capabilities" className="hover:text-emerald-400 transition-colors">Capabilities</a>
@@ -31,7 +28,10 @@ const Footer = () => {
           <a href="#philosophy" className="hover:text-emerald-400 transition-colors">Philosophy</a>
           <a href="#faq" className="hover:text-emerald-400 transition-colors">FAQ</a>
           <a href="#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
-        </div>
+        </div> */}
+        <p className="text-[11px] font-mono text-zinc-400">
+          &copy; {year} Saad Bin Khalid. All rights reserved.
+        </p>
 
         {/* Social & Copyright */}
         <div className="flex flex-col items-center md:items-end gap-3">
@@ -64,10 +64,6 @@ const Footer = () => {
               <FaWhatsapp size={16} />
             </a>
           </div>
-
-          <p className="text-[11px] font-mono text-zinc-400">
-            &copy; {year} Muhammad Saad Bin Khalid. All rights reserved.
-          </p>
         </div>
 
       </div>
